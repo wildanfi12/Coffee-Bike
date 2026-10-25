@@ -282,6 +282,12 @@ to {
   object-fit:contain;
   animation:slow-zoom 12s 1s ease-out both
 }
+.hero-photo {
+  border-color:rgba(99,64,43,.18);
+  border-radius:48% 48% 2px 2px;
+  background:radial-gradient(ellipse at 50% 45%,#fff8e9 0,#ead9bd 72%,#d7bea0 100%);
+  box-shadow:0 26px 55px rgba(64,42,29,.13)
+}
 @keyframes slow-zoom {
   from {
   transform:scale(1.06)
@@ -296,7 +302,7 @@ to {
   inset:0;
   content:'';
   pointer-events:none;
-  background:linear-gradient(180deg,transparent 73%,rgba(43,29,24,.08))
+  background:linear-gradient(180deg,transparent 73%,rgba(43,29,24,.025))
 }
 .hero-photo figcaption,.jogja-photo figcaption {
   position:absolute;
@@ -832,7 +838,8 @@ h2 {
   position:relative;
   margin:0;
   overflow:hidden;
-  background:#fffefa
+  border:1px solid rgba(99,64,43,.15);
+  background:radial-gradient(ellipse at 50% 45%,#fff8e9 0,#e6ddc4 74%,#d6c8a8 100%)
 }
 .jogja-photo img {
   object-fit:contain
@@ -965,15 +972,24 @@ h2 {
   position:relative;
   margin:0;
   overflow:hidden;
-  background:#fffefa
+  border:1px solid rgba(99,64,43,.14);
+  background:radial-gradient(ellipse at 50% 42%,#fff9ec 0,#eadbc1 78%,#ddc8a9 100%)
 }
 .gallery-item img {
+  flex:1 1 auto;
+  width:100%;
+  height:calc(100% - 42px);
+  min-height:0;
   object-fit:contain
 }
 .gallery-large {
+  display:flex;
+  flex-direction:column;
   height:455px
 }
 .gallery-small {
+  display:flex;
+  flex-direction:column;
   height:346px;
   margin-top:90px
 }
