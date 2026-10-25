@@ -4,162 +4,212 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f2e7d5" />
-  <meta name="description" content="Coffee Bike — tempat nongkrong, menikmati kopi, makan, bekerja, dan berkumpul di Jakarta." />
+  <meta name="description" content="Coffee Bike — tempat ngopi, makan, bekerja, dan berkumpul di Petamburan, Jakarta Barat. Your Space, Your Pace." />
+  <meta property="og:title" content="Coffee Bike — Your Space, Your Pace" />
+  <meta property="og:description" content="Ruang untuk ngopi, makan, bekerja, dan berkumpul di Jakarta Barat." />
+  <meta property="og:type" content="website" />
   <title>Coffee Bike — Your Space, Your Pace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./variables.css" />
   <link rel="stylesheet" href="./theme.css" />
 </head>
 <body>
-  <div class="film-grain" aria-hidden="true"></div>
-  <header class="hero" id="home">
-    <nav class="nav" aria-label="Navigasi utama">
-      <a class="wordmark" href="#home" aria-label="Coffee Bike — beranda">coffee <i>bike</i><span class="brand-star">✳</span></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu"><span></span><span></span></button>
+  <header class="site-header">
+    <nav class="nav page-wrap" aria-label="Navigasi utama">
+      <a class="wordmark" href="#home" aria-label="Coffee Bike — beranda">coffee <i>bike</i><span aria-hidden="true">✳</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu"><span></span><span></span></button>
       <div class="nav-links" id="nav-links">
-        <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#story">About</a><a class="nav-link" href="#menu">Menu</a><a class="nav-link" href="#facilities">Facilities</a><a class="nav-link" href="#atmosphere">Gallery</a><a class="nav-link" href="#visit">Visit Us</a>
+        <a class="nav-link active" href="#home">Beranda</a>
+        <a class="nav-link" href="#story">Cerita</a>
+        <a class="nav-link" href="#menu">Menu</a>
+        <a class="nav-link" href="#facilities">Fasilitas</a>
+        <a class="nav-link" href="#atmosphere">Suasana</a>
+        <a class="nav-link nav-visit" href="#location">Kunjungi Kami <span aria-hidden="true">↗</span></a>
       </div>
     </nav>
-    <div class="hero-layout">
-      <div class="hero-copy">
-        <p class="eyebrow hero-eyebrow"><span class="rule"></span> JAKARTA · EST. 2021</p>
-        <h1><span class="headline-line"><span>Your space.</span></span><span class="headline-line"><em>Your pace</em><span class="accent-dot">.</span></span></h1>
-        <p class="hero-description">Ngopi, makan, kerja, atau kumpul bareng—ada ruang untuk caramu menikmati hari.</p>
-        <div class="hero-actions"><a class="button button-dark" href="#menu">Explore our menu <span>↗</span></a><a class="button button-outline" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Follow on Instagram <span>↗</span></a></div>
-        <div class="hero-note"><span>COFFEE · FOOD · GOOD COMPANY</span><span>VOL. 01 · COFFEE BIKE</span></div>
-      </div>
-      <div class="hero-visual">
-        <div class="photo-frame hero-photo" data-cursor="Explore">
-          <img src="./Aset/optimized/IMG_2723.webp" alt="Americano Coffee Bike dengan foam kopi" fetchpriority="high" />
-          <span class="photo-index">FIG. 01 — COFFEE BIKE, EST. 2021</span>
-        </div>
-        <div class="round-stamp" aria-label="Coffee Bike — Your Space, Your Pace"><span class="stamp-text">COFFEE BIKE · YOUR SPACE YOUR PACE · </span><b>CB</b><i>✳</i></div>
-        <span class="hero-side-note">SERVED WITH A LITTLE SUNSHINE</span>
-      </div>
-    </div>
-    <a class="scroll-cue" href="#story"><span>SCROLL TO STAY AWHILE</span><i>↓</i></a>
   </header>
 
-  <div class="marquee" aria-label="Coffee, food, community, workspace, good moments"><div class="marquee-track"><span>COFFEE <i>✳</i> FOOD <i>✳</i> COMMUNITY <i>✳</i> WORKSPACE <i>✳</i> GOOD MOMENTS <i>✳</i> COFFEE BIKE <i>✳</i>&nbsp;</span><span aria-hidden="true">COFFEE <i>✳</i> FOOD <i>✳</i> COMMUNITY <i>✳</i> WORKSPACE <i>✳</i> GOOD MOMENTS <i>✳</i> COFFEE BIKE <i>✳</i>&nbsp;</span></div></div>
-
   <main>
-    <section class="story section-shell" id="story">
-      <div class="section-index">01 / A NOTE FROM US</div>
+    <section class="hero page-wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> PETAMBURAN, JAKARTA · SEJAK 2021</p>
+        <h1 id="hero-title">Singgah<br />sejenak.<br /><em>Rasa lebih.</em></h1>
+        <p class="hero-description">Tempat untuk menikmati kopi, berbagi makanan, dan memberi ruang bagi harimu berjalan dengan ritmemu sendiri.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">Jelajahi Menu <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#location">Petunjuk Lokasi <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-signoff"><span>Your Space, Your Pace.</span><span class="hero-signoff-mark" aria-hidden="true">✳</span><span>COFFEE · FOOD · GOOD COMPANY</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+        <div class="steam-art" aria-hidden="true">
+          <svg viewBox="0 0 120 160" fill="none"><path d="M39 146c-19-20 19-31 0-52S50 61 42 44 51 19 55 10"/><path d="M70 149c-17-23 21-34 8-54S92 64 80 46 85 25 91 15"/><path d="M99 147c-14-21 12-33 6-49"/></svg>
+        </div>
+        <figure class="hero-photo photo-frame">
+          <img src="./Aset/optimized/IMG_2723.webp" alt="Americano Original Coffee Bike dengan lapisan crema" fetchpriority="high" width="1086" height="1400" />
+          <figcaption><span>01 / AMERICANO ORIGINAL</span><span>MADE FOR SLOW MORNINGS</span></figcaption>
+        </figure>
+        <div class="round-stamp" aria-label="Coffee Bike, Jakarta, sejak 2021"><span>COFFEE BIKE · JAKARTA ·</span><b>CB</b><i aria-hidden="true">✳</i></div>
+        <svg class="coffee-ring" viewBox="0 0 120 120" fill="none" aria-hidden="true"><path d="M61 7c27 1 50 22 51 50 2 28-21 52-49 55S10 94 8 65 28 11 56 8c24-3 47 12 50 37 3 24-15 46-38 48-20 2-38-12-40-32-2-16 10-31 26-33 13-2 25 7 27 20 1 10-6 19-16 20"/></svg>
+        <span class="hero-art-caption">A LITTLE RITUAL, EVERY DAY</span>
+        <svg class="coffee-bean bean-one" viewBox="0 0 46 66" aria-hidden="true"><path d="M23 3C8 7 2 23 5 38s13 25 23 24 15-15 13-31S33 0 23 3Z"/><path d="M28 7C17 16 13 29 14 42s5 17 9 18"/></svg>
+        <svg class="coffee-bean bean-two" viewBox="0 0 46 66" aria-hidden="true"><path d="M23 3C8 7 2 23 5 38s13 25 23 24 15-15 13-31S33 0 23 3Z"/><path d="M28 7C17 16 13 29 14 42s5 17 9 18"/></svg>
+      </div>
+      <a class="scroll-cue" href="#story"><span>KENALI COFFEE BIKE</span><i aria-hidden="true">↓</i></a>
+    </section>
+
+    <div class="marquee" aria-label="Kopi, makanan, ruang, dan kebersamaan"><div class="marquee-track"><span>KOPI <i>✳</i> MAKANAN <i>✳</i> RUANG UNTUKMU <i>✳</i> GOOD COMPANY <i>✳</i> COFFEE BIKE <i>✳</i>&nbsp;</span><span aria-hidden="true">KOPI <i>✳</i> MAKANAN <i>✳</i> RUANG UNTUKMU <i>✳</i> GOOD COMPANY <i>✳</i> COFFEE BIKE <i>✳</i>&nbsp;</span></div></div>
+
+    <section class="story section-shell" id="story" aria-labelledby="story-title">
+      <div class="section-index"><span>01</span><span>SEBUAH CATATAN DARI KAMI</span></div>
       <div class="story-grid">
-        <div class="story-title reveal"><p class="eyebrow">Since 2021 · Jakarta</p><h2>More than<br /><em>just coffee.</em></h2></div>
-        <div class="story-copy reveal"><p class="dropcap">Coffee Bike adalah tempat nongkrong yang cozy dan nyaman untuk menikmati kopi, menyantap makanan, berkumpul bersama teman, bekerja, maupun berkegiatan bersama.</p><p>Lewat konsep Little Jogja, coffee shop modern bertemu dengan kuliner tradisional Indonesia.</p><span class="hand-note">your space, your pace <i>♡</i></span></div>
+        <div class="story-title reveal"><p class="eyebrow">Coffee Bike · Jakarta, sejak 2021</p><h2 id="story-title">Lebih dari<br /><em>secangkir kopi.</em></h2></div>
+        <div class="story-copy reveal"><p class="dropcap">Coffee Bike adalah tempat untuk menikmati kopi, menyantap makanan, bekerja, dan berkumpul bersama orang-orang terdekat.</p><p>Datang untuk menyelesaikan pekerjaan atau sekadar duduk lebih lama. Di sini, ada ruang untuk caramu menikmati hari.</p><span class="hand-note">your space, your pace <i aria-hidden="true">♡</i></span></div>
       </div>
-      <div class="story-photo story-menu-photo photo-frame" data-cursor="Little Jogja"><img src="./Aset/optimized/IMG_2728.webp" alt="Hidangan nasi dan sambal dari menu Coffee Bike" loading="lazy" /><span class="photo-index">LITTLE JOGJA · TRADITIONAL & MODERN</span></div>
+      <div class="story-rule" aria-hidden="true"><svg viewBox="0 0 1000 56" preserveAspectRatio="none"><path d="M1 31c163 6 179-18 315-14 127 3 155 23 282 12 124-11 203-11 401-1"/><circle cx="1" cy="31" r="3"/><circle cx="999" cy="28" r="3"/></svg></div>
     </section>
 
-    <section class="coffee-section" id="menu">
+    <section class="coffee-section" id="menu" aria-labelledby="menu-title">
       <div class="section-shell coffee-inner">
-        <div class="section-index">02 / FROM THE MENU</div>
-        <div class="coffee-heading reveal"><p class="eyebrow">A little something for everyone</p><h2>Good food.<br /><em>Good company.</em></h2><p>Menu pilihan Coffee Bike — dinikmati di tempat, bersama teman, atau sambil menyelesaikan pekerjaan.</p></div>
-        <div class="menu-editorial">
-          <article class="menu-feature menu-drinks">
-            <div class="menu-photo-pair"><figure class="menu-photo photo-frame" data-cursor="Coffee"><img src="./Aset/optimized/IMG_2723.webp" alt="Americano Original dengan foam" loading="lazy" /><figcaption>01 — AMERICANO ORIGINAL</figcaption></figure><figure class="menu-photo menu-photo-offset photo-frame" data-cursor="Coffee"><img src="./Aset/optimized/IMG_2726.webp" alt="Minuman kopi Coffee Bike dengan es" loading="lazy" /><figcaption>02 — AMERICANO SERIES</figcaption></figure></div>
-            <div class="menu-description"><p class="eyebrow">01 / Coffee</p><h3>Americano<br /><em>Series</em></h3><ul class="menu-list"><li>Americano Original</li><li>Coconut Americano</li><li>Rum Americano</li><li>Helena <small>Jasmine & Blueberry Coffee</small></li><li>Americano Soda <small>Americano dengan sedikit soda</small></li></ul></div>
+        <div class="section-index"><span>02</span><span>DARI DAPUR COFFEE BIKE</span></div>
+        <div class="coffee-heading reveal"><div><p class="eyebrow">Dibuat untuk dinikmati pelan-pelan</p><h2 id="menu-title">Rasa yang<br /><em>ingin diulang.</em></h2></div><p>Temukan teman untuk obrolan panjang, jeda di tengah hari, atau meja penuh cerita.</p></div>
+        <div class="menu-grid">
+          <article class="menu-group reveal">
+            <div class="menu-group-head"><span class="menu-number">01</span><div><p class="eyebrow">Diseduh untuk jeda</p><h3>Coffee<br /><em>series.</em></h3></div><span class="menu-doodle" aria-hidden="true">↗</span></div>
+            <ul class="menu-list">
+              <li><span>Americano Original</span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li><span>Coconut Americano</span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li><span>Rum Americano</span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li><span>Helena <small>Jasmine & Blueberry Coffee</small></span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li><span>Americano Soda <small>Americano dengan sedikit soda</small></span><span class="menu-dash" aria-hidden="true"></span></li>
+            </ul>
           </article>
-          <article class="menu-feature menu-food">
-            <div class="menu-food-copy"><p class="eyebrow">02 / Little Jogja</p><h3>Food for<br /><em>the table.</em></h3><p>Kuliner tradisional Indonesia dengan sentuhan coffee shop modern.</p></div>
-            <figure class="menu-photo food-main photo-frame" data-cursor="Little Jogja"><img src="./Aset/optimized/IMG_2728.webp" alt="Sajian nasi, sambal, dan lauk Coffee Bike" loading="lazy" /><figcaption>03 — NASI BAKAR BUMBU RUJAK</figcaption></figure>
-            <div class="food-details"><h4>Nasi Bakar Bumbu Rujak</h4><p>Bumbu rujak dari cabai merah, tomat, bawang merah, dan bawang putih. Disajikan bersama sambal bawang.</p></div>
-            <figure class="menu-photo donut-photo photo-frame" data-cursor="A little snack"><img src="./Aset/optimized/IMG_2727.webp" alt="Kentang donat dengan taburan gula halus" loading="lazy" /><figcaption>04 — KENTANG DONAT</figcaption></figure>
-            <div class="food-details donut-details"><h4>Kentang Donat</h4><p>Camilan berbahan dasar kentang dengan taburan gula halus.</p></div>
+          <article class="menu-group menu-group-food reveal">
+            <div class="menu-group-head"><span class="menu-number">02</span><div><p class="eyebrow">Sedikit rasa rumahan</p><h3>Little<br /><em>Jogja.</em></h3></div><span class="menu-doodle menu-doodle-sun" aria-hidden="true">✳</span></div>
+            <ul class="menu-list">
+              <li><span>Nasi Bakar Bumbu Rujak <small>Bumbu rujak dan sambal bawang</small></span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li><span>Kentang Donat <small>Camilan kentang dengan taburan gula halus</small></span><span class="menu-dash" aria-hidden="true"></span></li>
+            </ul>
+            <p class="menu-note">Kuliner tradisional Indonesia bertemu suasana coffee shop modern.</p>
           </article>
         </div>
-        <a class="underlined-link menu-contact" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Ask us about the menu <span>↗</span></a>
+        <a class="underlined-link menu-contact" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Tanya tentang menu <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <section class="little-jogja section-shell" id="little-jogja">
-      <div class="section-index">03 / LITTLE JOGJA</div>
-      <div class="little-jogja-copy reveal"><span class="jogja-sun">✳</span><p class="eyebrow">Tradition meets today</p><h2>A taste of<br /><em>Little Jogja.</em></h2><p>Perpaduan masakan tradisional Indonesia dan pendekatan coffee shop modern. Rasa akrab, dinikmati dengan cara yang santai.</p></div>
-      <div class="little-jogja-photo photo-frame" data-cursor="Little Jogja"><img src="./Aset/optimized/IMG_2728.webp" alt="Menu makanan Coffee Bike dari konsep Little Jogja" loading="lazy" /><span class="photo-index">LITTLE JOGJA · COFFEE BIKE</span></div>
+    <section class="little-jogja section-shell" id="little-jogja" aria-labelledby="jogja-title">
+      <div class="section-index"><span>03</span><span>LITTLE JOGJA</span></div>
+      <div class="little-jogja-copy reveal"><p class="eyebrow">Rasa akrab, suasana baru</p><h2 id="jogja-title">Sejenak di<br /><em>Little Jogja.</em></h2><p>Perpaduan masakan tradisional Indonesia dan suasana coffee shop modern. Rasa akrab, dinikmati dengan cara yang santai.</p><a class="underlined-link" href="#menu">Lihat pilihan makanan <span aria-hidden="true">↗</span></a></div>
+      <figure class="jogja-photo photo-frame reveal"><img src="./Aset/optimized/IMG_2728.webp" alt="Nasi bakar dan sambal dari menu Little Jogja" loading="lazy" width="1086" height="1400" /><figcaption><span>LITTLE JOGJA</span><span>TRADITION MEETS TODAY</span></figcaption></figure>
+      <svg class="jogja-motif" viewBox="0 0 220 220" fill="none" aria-hidden="true"><circle cx="110" cy="110" r="87"/><circle cx="110" cy="110" r="69"/><path d="M110 9v202M9 110h202M39 39l142 142M181 39 39 181"/><path d="M110 36c9 28 18 38 45 47-27 9-36 18-45 46-9-28-18-37-45-46 27-9 36-19 45-47Z"/></svg>
     </section>
 
-    <section class="facilities section-shell" id="facilities">
-      <div class="section-index">04 / ROOM FOR YOUR PLANS</div>
-      <div class="facilities-heading reveal"><p class="eyebrow">Make yourself at home</p><h2>Stay for work.<br /><em>Gather for anything.</em></h2></div>
+    <section class="facilities section-shell" id="facilities" aria-labelledby="facilities-title">
+      <div class="section-index"><span>04</span><span>RUANG UNTUK RENCANAMU</span></div>
+      <div class="facilities-heading reveal"><div><p class="eyebrow">Make yourself at home</p><h2 id="facilities-title">Datang untuk kerja.<br /><em>Tinggal untuk apa saja.</em></h2></div><p>Satu ruang, banyak cara untuk menikmatinya.</p></div>
       <div class="facility-list">
-        <article><span>01</span><h3>Working Space</h3><p>Area untuk bekerja, belajar, dan menyelesaikan pekerjaan.</p></article>
-        <article><span>02</span><h3>Functional Room</h3><p>Ruang multifungsi untuk kegiatan kelompok hingga 30 orang.</p></article>
-        <article><span>03</span><h3>VIP Room</h3><p>Ruang privat untuk kebutuhan khusus.</p></article>
-        <article><span>04</span><h3>Projector</h3><p>Untuk presentasi dan berbagai kegiatan.</p></article>
-        <article><span>05</span><h3>Live Music</h3><p>Hiburan musik untuk menemani waktu di Coffee Bike.</p></article>
-        <article><span>06</span><h3>Wi-Fi</h3><p>Koneksi internet untuk kebutuhan kerja dan aktivitas digital.</p></article>
+        <article><span>01</span><h3>Working Space</h3><p>Area untuk bekerja, belajar, dan menyelesaikan pekerjaan.</p><i aria-hidden="true">↗</i></article>
+        <article><span>02</span><h3>Functional Room</h3><p>Ruang multifungsi, kapasitas hingga 30 orang.</p><i aria-hidden="true">↗</i></article>
+        <article><span>03</span><h3>VIP Room</h3><p>Ruang privat untuk kebutuhan khusus.</p><i aria-hidden="true">↗</i></article>
+        <article><span>04</span><h3>Projector</h3><p>Untuk presentasi dan berbagai kegiatan.</p><i aria-hidden="true">↗</i></article>
+        <article><span>05</span><h3>Live Music</h3><p>Hiburan musik untuk menemani waktu di Coffee Bike.</p><i aria-hidden="true">↗</i></article>
+        <article><span>06</span><h3>Wi-Fi</h3><p>Koneksi internet untuk kebutuhan kerja dan aktivitas digital.</p><i aria-hidden="true">↗</i></article>
       </div>
-      <a class="underlined-link" href="tel:087867380424">Ask about the room <span>↗</span></a>
+      <a class="underlined-link facility-contact" href="tel:087867380424">Tanya tentang ruangan <span aria-hidden="true">↗</span></a>
     </section>
 
-    <section class="atmosphere section-shell" id="atmosphere">
-      <div class="section-index">05 / LITTLE MOMENTS</div>
-      <div class="atmosphere-heading reveal"><div><p class="eyebrow">Coffee Bike, up close</p><h2>Make room for<br /><em>good moments.</em></h2></div><p class="atmosphere-aside">Coffee, food,<br />and time together.</p></div>
+    <section class="atmosphere section-shell" id="atmosphere" aria-labelledby="atmosphere-title">
+      <div class="section-index"><span>05</span><span>MOMEN KECIL COFFEE BIKE</span></div>
+      <div class="atmosphere-heading reveal"><div><p class="eyebrow">Coffee Bike, lebih dekat</p><h2 id="atmosphere-title">Untuk jeda,<br /><em>dan cerita.</em></h2></div><p class="atmosphere-aside">A little coffee.<br />A little more time.</p></div>
       <div class="gallery-grid">
-        <figure class="gallery-item gallery-large photo-frame reveal" data-cursor="Coffee Bike"><img src="./Aset/optimized/IMG_2726.webp" alt="Kopi es dalam gelas Coffee Bike" loading="lazy" /><figcaption><span>01 — COFFEE BREAK</span><i>take your time</i></figcaption></figure>
-        <figure class="gallery-item gallery-small photo-frame reveal" data-cursor="Little Jogja"><img src="./Aset/optimized/IMG_2727.webp" alt="Kentang donat Coffee Bike" loading="lazy" /><figcaption><span>02 — SOMETHING SWEET</span><i>made for sharing</i></figcaption></figure>
-        <div class="gallery-note reveal"><span class="sun-mark">✳</span><p>Your space,<br /><em>your pace.</em></p><span>COFFEE BIKE · JAKARTA</span></div>
+        <figure class="gallery-item gallery-large photo-frame reveal"><img src="./Aset/optimized/IMG_2726.webp" alt="Iced coffee Coffee Bike dengan es batu" loading="lazy" width="1086" height="1400" /><figcaption><span>01 — COFFEE BREAK</span><i>take your time</i></figcaption></figure>
+        <figure class="gallery-item gallery-small photo-frame reveal"><img src="./Aset/optimized/IMG_2727.webp" alt="Kentang donat tersaji di atas piring" loading="lazy" width="1086" height="1400" /><figcaption><span>02 — SOMETHING TO SHARE</span><i>made for sharing</i></figcaption></figure>
+        <div class="gallery-note reveal"><span class="sun-mark" aria-hidden="true">✳</span><p>Your space,<br /><em>your pace.</em></p><span>COFFEE BIKE · JAKARTA</span></div>
       </div>
     </section>
 
-    <section class="hours-section" id="visit">
-      <div class="hours-wrap section-shell reveal">
-          <div class="hours-heading"><p class="eyebrow">Come by, stay a while</p><h2>Our opening<br /><em>hours.</em></h2><span class="open-badge"><i></i> OPEN EVERY DAY</span></div>
-        <div class="hours-list">
-          <div class="hours-row"><div><span class="day-label">MONDAY — THURSDAY</span><h3>Weekday</h3></div><div class="time-label">11.00 <span>—</span> 00.00<small>Tutup tengah malam</small></div></div>
-          <div class="hours-row"><div><span class="day-label">FRIDAY — SUNDAY</span><h3>Weekend</h3></div><div class="time-label">11.00 <span>—</span> 03.00<small>Dini hari berikutnya</small></div></div>
-          <p class="hours-footnote">Jam weekend berlanjut hingga dini hari berikutnya.</p>
+    <section class="hours-section" id="hours" aria-labelledby="hours-title">
+      <div class="hours-wrap section-shell">
+        <div class="hours-heading reveal"><p class="eyebrow">Mampir, duduk lebih lama</p><h2 id="hours-title">Waktu<br /><em>berkunjung.</em></h2><span class="open-badge"><i aria-hidden="true"></i> BUKA SETIAP HARI</span></div>
+        <div class="hours-list reveal">
+          <div class="hours-row"><div><span class="day-label">SENIN — KAMIS</span><h3>Hari kerja</h3></div><div class="time-label">11.00 <span>—</span> 00.00<small>Tutup tengah malam</small></div></div>
+          <div class="hours-row"><div><span class="day-label">JUMAT — MINGGU</span><h3>Akhir pekan</h3></div><div class="time-label">11.00 <span>—</span> 03.00<small>Dini hari berikutnya</small></div></div>
+          <p class="hours-footnote">Jam akhir pekan berlanjut hingga dini hari berikutnya.</p>
         </div>
       </div>
     </section>
 
-    <section class="location-section section-shell" id="location">
-      <div class="section-index">07 / FIND YOUR WAY</div>
-      <div class="location-layout"><div class="location-copy reveal"><p class="eyebrow">Coffee Bike · Jakarta Barat</p><h2>We'll save<br /><em>you a seat.</em></h2><address>Jalan Muwardi 1 No. 30<br />Petamburan, Grogol<br />Jakarta Barat, Indonesia</address><div class="location-actions"><a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Jalan+Muwardi+1+No.+30%2C+Petamburan%2C+Grogol%2C+Jakarta+Barat%2C+Indonesia" target="_blank" rel="noopener noreferrer">Get directions <span>↗</span></a><a class="underlined-link" href="tel:087867380424">0878 6738 0424 <span>↗</span></a></div></div><div class="location-art" aria-hidden="true"><svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="150" r="116" stroke="currentColor" stroke-dasharray="2 7"/><path d="M150 63c-38 0-69 30-69 67 0 49 69 111 69 111s69-62 69-111c0-37-31-67-69-67Z" stroke="currentColor" stroke-width="2.5"/><circle cx="150" cy="130" r="25" stroke="currentColor" stroke-width="2.5"/><path d="M132 130c9-11 27-11 36 0m-25 0h.1m14 0h.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M32 151h28m180 0h28M149 20v25m0 210v25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>JAKARTA BARAT<br />INDONESIA</span></div></div>
+    <section class="location-section section-shell" id="location" aria-labelledby="location-title">
+      <div class="section-index"><span>06</span><span>TEMUKAN JALANMU KE SINI</span></div>
+      <div class="location-layout"><div class="location-copy reveal"><p class="eyebrow">Coffee Bike · Jakarta Barat</p><h2 id="location-title">Kami siapkan<br /><em>tempat untukmu.</em></h2><address>Jalan Muwardi 1 No. 30<br />Petamburan, Grogol<br />Jakarta Barat, Indonesia</address><div class="location-actions"><a class="button button-light" href="https://www.google.com/maps/search/?api=1&amp;query=Jalan+Muwardi+1+No.+30%2C+Petamburan%2C+Grogol%2C+Jakarta+Barat%2C+Indonesia" target="_blank" rel="noopener noreferrer">Petunjuk Lokasi <span aria-hidden="true">↗</span></a><a class="phone-link" href="tel:087867380424">0878 6738 0424</a></div></div><div class="location-art reveal" aria-hidden="true"><svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="map-circle" cx="150" cy="150" r="116"/><path d="M150 63c-38 0-69 30-69 67 0 49 69 111 69 111s69-62 69-111c0-37-31-67-69-67Z"/><circle cx="150" cy="130" r="25"/><path d="M132 130c9-11 27-11 36 0m-25 0h.1m14 0h.1M32 151h28m180 0h28M149 20v25m0 210v25" stroke-linecap="round"/></svg><span>JAKARTA BARAT<br />INDONESIA</span></div></div>
     </section>
 
-    <section class="social-section section-shell">
-      <div class="social-stamp">A LITTLE<br />MORE <i>♡</i></div>
-      <p class="eyebrow">Keep in touch</p><h2>Follow our<br /><em>journey.</em></h2><p class="social-copy">Ikuti cerita, suasana, dan momen terbaru dari Coffee Bike.</p>
-      <div class="social-actions"><a class="button button-dark" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Find us on Instagram <span>↗</span></a><a class="button button-outline" href="https://www.tiktok.com/@coffee_bikee" target="_blank" rel="noopener noreferrer">TikTok <span>↗</span></a></div>
+    <section class="social-section section-shell" id="social" aria-labelledby="social-title">
+      <div class="social-stamp" aria-hidden="true">A LITTLE<br />MORE <i>♡</i></div>
+      <p class="eyebrow">Tetap terhubung</p><h2 id="social-title">Sampai jumpa<br /><em>di sana.</em></h2><p class="social-copy">Ikuti cerita, suasana, dan momen terbaru dari Coffee Bike.</p>
+      <div class="social-actions"><a class="button button-dark" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.tiktok.com/@coffee_bikee" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a></div>
       <span class="social-handle">@COFFEEBIKE · INSTAGRAM & TIKTOK</span>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-main"><a class="footer-brand" href="#home">coffee <i>bike</i><span>✳</span></a><p>Your space.<br /><em>Your pace.</em></p><div class="footer-nav"><a href="#story">About</a><a href="#menu">Menu</a><a href="#facilities">Facilities</a><a href="#atmosphere">Gallery</a><a href="#location">Visit Us</a><a href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@coffee_bikee" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div></div>
-    <div class="footer-bottom"><span>JALAN MUWARDI 1 NO. 30 · JAKARTA BARAT · WEEKDAY 11.00—00.00 · WEEKEND 11.00—03.00</span><span>© <span id="year"></span> COFFEE BIKE</span><a href="#home">BACK TO TOP ↑</a></div>
+    <div class="footer-main"><a class="footer-brand" href="#home">coffee <i>bike</i><span aria-hidden="true">✳</span></a><p>Your space.<br /><em>Your pace.</em></p><div class="footer-nav" aria-label="Tautan footer"><a href="#story">Cerita</a><a href="#menu">Menu</a><a href="#facilities">Fasilitas</a><a href="#atmosphere">Suasana</a><a href="#location">Kunjungi Kami</a><a href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@coffee_bikee" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div></div>
+    <div class="footer-bottom"><span>JALAN MUWARDI 1 NO. 30 · JAKARTA BARAT · SETIAP HARI</span><span>© <span id="year"></span> COFFEE BIKE</span><a href="#home">KEMBALI KE ATAS ↑</a></div>
   </footer>
-  <div class="cursor-label" aria-hidden="true">Explore</div>
   <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', () => {
-      const open = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', String(!open));
-      menuToggle.setAttribute('aria-label', open ? 'Buka menu' : 'Tutup menu');
-      navLinks.classList.toggle('is-open', !open);
-    });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menuToggle.setAttribute('aria-expanded', 'false'); navLinks.classList.remove('is-open'); }));
-    document.querySelector('#year').textContent = new Date().getFullYear();
-    const revealItems = document.querySelectorAll('.reveal, .photo-frame');
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const observer = new IntersectionObserver((entries, instance) => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); instance.unobserve(entry.target); } }), { threshold: .12 });
-      revealItems.forEach(item => { item.classList.add('will-reveal'); observer.observe(item); });
-    }
-    const sections = document.querySelectorAll('main section[id], header[id]');
-    if ('IntersectionObserver' in window) {
-      const navObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { document.querySelectorAll('.nav-link').forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id)); } }), { rootMargin: '-35% 0px -55% 0px' });
-      sections.forEach(section => navObserver.observe(section));
-    }
-    const cursor = document.querySelector('.cursor-label');
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      document.addEventListener('pointermove', event => { cursor.style.transform = `translate(${event.clientX + 16}px, ${event.clientY + 16}px)`; });
-      document.querySelectorAll('[data-cursor]').forEach(item => {
-        item.addEventListener('pointerenter', () => { cursor.textContent = item.dataset.cursor; cursor.classList.add('visible'); });
-        item.addEventListener('pointerleave', () => cursor.classList.remove('visible'));
+    (() => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const isMobileNav = window.matchMedia('(max-width: 760px)');
+      const syncMenuMode = () => {
+        if (!isMobileNav.matches) {
+          navLinks.inert = false;
+          navLinks.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        } else navLinks.inert = menuToggle.getAttribute('aria-expanded') !== 'true';
+      };
+      const closeMenu = () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Buka menu');
+        navLinks.classList.remove('is-open');
+        syncMenuMode();
+      };
+      syncMenuMode();
+      isMobileNav.addEventListener('change', syncMenuMode);
+      menuToggle.addEventListener('click', () => {
+        const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+        navLinks.classList.toggle('is-open', open);
+        navLinks.inert = !open && isMobileNav.matches;
       });
-    }
+      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+      document.querySelector('#year').textContent = new Date().getFullYear();
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = document.querySelectorAll('.reveal, .photo-frame, .story-rule');
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        document.body.classList.add('motion-ready');
+        const observer = new IntersectionObserver((entries, instance) => entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); instance.unobserve(entry.target); }
+        }), { threshold: .14, rootMargin: '0px 0px -35px 0px' });
+        revealItems.forEach(item => observer.observe(item));
+      }
+
+      if ('IntersectionObserver' in window) {
+        const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          document.querySelectorAll('.nav-link').forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+        }), { rootMargin: '-38% 0px -56% 0px' });
+        document.querySelectorAll('main section[id]').forEach(section => navObserver.observe(section));
+      }
+
+    })();
   </script>
 </body>
 </html>

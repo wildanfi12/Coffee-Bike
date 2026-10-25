@@ -1,22 +1,20 @@
 :root {
   --espresso: #2b1d18;
   --corten: #b84b30;
-  --bordeaux: #5f1d1a;
-  --green: #354638;
-  --corten: #b84b30;
-  --bordeaux: #5f1d1a;
-  --green: #354638;
   --roasted: #50372a;
   --sienna: #a65f3e;
   --cream: #f2e7d5;
   --paper: #e6d4b8;
   --olive: #777653;
+  --green: #354638;
   --charcoal: #292723;
-  --muted: #827467;
-  --line: rgba(43, 29, 24, .24);
+  --muted: #74665a;
+  --line: rgba(43, 29, 24, .2);
+  --line-light: rgba(242, 231, 213, .24);
   --serif: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
   --sans: 'DM Sans', Arial, sans-serif;
   --mono: 'IBM Plex Mono', 'Courier New', monospace;
-  --page-width: 1280px;
-  --gutter: clamp(22px, 6vw, 88px);
+  --page-width: 1240px;
+  --gutter: clamp(20px, 5.6vw, 82px);
+  --header-height: 78px;
 }
