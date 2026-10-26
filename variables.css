@@ -8,6 +8,9 @@
   --taupe: #827568;
   --taupe-ink: #6F6258;
   --paper-shade: #E9DDCA;
+  --surface-warm: #EFE4D1;
+  --forest-deep: #1D2D25;
+  --espresso-deep: #16100E;
   --espresso-rgb: 36, 26, 22;
   --forest-rgb: 38, 59, 49;
   --paper-rgb: 243, 235, 221;
@@ -31,3 +34,4 @@
   --gutter: clamp(20px, 5.6vw, 82px);
   --header-height: 78px;
 }
+
