@@ -1,37 +1,61 @@
 :root {
-  --espresso: #241A16;
-  --forest: #263B31;
-  --paper: #F3EBDD;
-  --white: #FFFDF7;
-  --corten: #B95F3B;
-  --copper: #C9865E;
-  --taupe: #827568;
-  --taupe-ink: #6F6258;
-  --paper-shade: #E9DDCA;
-  --surface-warm: #EFE4D1;
-  --forest-deep: #1D2D25;
-  --espresso-deep: #16100E;
-  --espresso-rgb: 36, 26, 22;
-  --forest-rgb: 38, 59, 49;
-  --paper-rgb: 243, 235, 221;
-  --white-rgb: 255, 253, 247;
-  --corten-rgb: 185, 95, 59;
-  --copper-rgb: 201, 134, 94;
-  --orange: var(--corten);
-  --charcoal: var(--espresso);
-  --roasted: var(--espresso);
-  --sienna: var(--copper);
-  --cream: var(--paper);
-  --olive: var(--forest);
-  --green: var(--forest);
-  --muted: var(--taupe-ink);
-  --line: rgba(36, 26, 22, .16);
-  --line-light: rgba(243, 235, 221, .2);
-  --serif: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
-  --sans: 'DM Sans', Arial, sans-serif;
-  --mono: 'IBM Plex Mono', 'Courier New', monospace;
-  --page-width: 1240px;
-  --gutter: clamp(20px, 5.6vw, 82px);
-  --header-height: 78px;
-}
+  /* Vintage Aesthetic Palette */
+  --bg-paper: #FBF8F3;
+  --bg-paper-alt: #F4ECE1;
+  --bg-paper-soft: #F0E6D8;
+  --bg-card: #FFFDF9;
+  --bg-dark: #1E1613;
+  --bg-dark-surface: #29201C;
 
+  /* Typography Colors */
+  --ink-primary: #1E1613;
+  --ink-secondary: #54463F;
+  --ink-muted: #84756D;
+  --ink-light: #FBF8F3;
+  --ink-light-muted: #CFC4BB;
+
+  /* Vintage Accent Colors */
+  --terracotta: #B65430;
+  --terracotta-hover: #9E4322;
+  --terracotta-light: #F6EBE5;
+  --terracotta-rgb: 182, 84, 48;
+
+  --olive: #344837;
+  --olive-light: #EBF0EC;
+
+  --brass: #C69852;
+  --brass-soft: #DFC394;
+  --copper: #CA8258;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(30, 22, 19, 0.08);
+  --border-medium: rgba(30, 22, 19, 0.16);
+  --border-strong: rgba(30, 22, 19, 0.3);
+  --border-light: rgba(251, 248, 243, 0.15);
+  --border-light-medium: rgba(251, 248, 243, 0.3);
+
+  /* Shadows (Subtle & Warm) */
+  --shadow-sm: 0 2px 8px rgba(30, 22, 19, 0.04);
+  --shadow-md: 0 8px 24px rgba(30, 22, 19, 0.07);
+  --shadow-lg: 0 16px 40px rgba(30, 22, 19, 0.1);
+  --shadow-warm: 0 12px 36px rgba(182, 84, 48, 0.12);
+
+  /* Typography */
+  --serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Layout & Sizing */
+  --page-width: 1200px;
+  --gutter: clamp(20px, 4.5vw, 60px);
+  --header-height: 74px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Motion */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
