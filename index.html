@@ -38,7 +38,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> COFFEE · LITTLE JOGJA · PETAMBURAN</p>
         <h1 id="hero-title">A LITTLE<br />PAUSE.<br /><em>A LOT OF SOUL.</em></h1>
-        <p class="hero-description">Coffee Bike adalah ruang untuk menikmati kopi, menyantap makanan, bekerja, dan bertemu teman dalam suasana yang nyaman.</p>
+        <p class="hero-description">Kopi, hidangan Little Jogja, dan ruang nyaman untuk bertemu atau bekerja.</p>
         <div class="hero-actions">
           <a class="button button-dark" href="#menu">Jelajahi Menu <span aria-hidden="true">↗</span></a>
           <a class="button button-outline" href="#location">Lihat lokasi <span aria-hidden="true">↗</span></a>
@@ -200,6 +200,36 @@
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const heroVideo = document.querySelector('.hero-video');
       if (heroVideo && !reduceMotion) heroVideo.play().catch(() => {});
+      const heroArt = document.querySelector('.hero-art');
+      const heroCup = document.querySelector('.hero-cup-art');
+      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+      if (heroArt && heroCup && !reduceMotion && finePointer.matches) {
+        let cupFrame = 0;
+        heroArt.addEventListener('pointermove', event => {
+          const bounds = heroArt.getBoundingClientRect();
+          const x = (event.clientX - bounds.left) / bounds.width - .5;
+          const y = (event.clientY - bounds.top) / bounds.height - .5;
+          if (cupFrame) cancelAnimationFrame(cupFrame);
+          cupFrame = requestAnimationFrame(() => {
+            heroCup.style.setProperty('--cup-rotate-y', `${(x * 5).toFixed(2)}deg`);
+            heroCup.style.setProperty('--cup-rotate-x', `${(-y * 4).toFixed(2)}deg`);
+            heroCup.style.setProperty('--cup-x', `${(x * 6).toFixed(1)}px`);
+            heroCup.style.setProperty('--cup-y', `${(y * 5).toFixed(1)}px`);
+            heroCup.style.setProperty('--cup-z', '5px');
+            heroArt.classList.add('is-interactive');
+            cupFrame = 0;
+          });
+        }, { passive:true });
+        heroArt.addEventListener('pointerleave', () => {
+          if (cupFrame) cancelAnimationFrame(cupFrame);
+          heroCup.style.setProperty('--cup-rotate-y', '0deg');
+          heroCup.style.setProperty('--cup-rotate-x', '0deg');
+          heroCup.style.setProperty('--cup-x', '0px');
+          heroCup.style.setProperty('--cup-y', '0px');
+          heroCup.style.setProperty('--cup-z', '0px');
+          heroArt.classList.remove('is-interactive');
+        }, { passive:true });
+      }
       const siteHeader = document.querySelector('.site-header');
       let scrollFrame = 0;
       const updateScrollEffects = () => {

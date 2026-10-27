@@ -65,12 +65,12 @@ button {
 }
 .nav {
   width:min(calc(100% - 2 * var(--gutter)),var(--page-width));
-  height:66px;
+  height:58px;
   display:grid;
   grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
   align-items:center;
   gap:24px;
-  padding:0 clamp(20px,2.2vw,32px);
+  padding:0 clamp(18px,2vw,28px);
   border:1px solid rgba(var(--paper-rgb),.18);
   border-radius:999px;
   background:rgba(29,45,37,.58);
@@ -86,7 +86,7 @@ button {
 }
 .wordmark,.footer-brand {
   position:relative;
-  font:600 28px/.8 var(--serif);
+  font:600 25px/.8 var(--serif);
   letter-spacing:-.065em;
   white-space:nowrap
 }
@@ -149,11 +149,11 @@ button {
   transform-origin:left
 }
 .nav-visit {
-  min-height:46px;
+  min-height:40px;
   display:inline-flex;
   align-items:center;
-  gap:18px;
-  padding:0 20px;
+  gap:14px;
+  padding:0 17px;
   border:1px solid rgba(var(--white-rgb),.7);
   border-radius:999px;
   background:var(--paper);
@@ -375,15 +375,16 @@ to {
   position:relative;
   display:grid;
   place-items:center;
-  isolation:isolate;
+  isolation:auto;
+  perspective:1100px;
   justify-self:end;
   overflow:visible
 }
 .hero-visual-glow {
   position:absolute;
-  z-index:-2;
+  z-index:-1;
   inset:-12% -8%;
-  background:radial-gradient(ellipse at 52% 58%,rgba(var(--corten-rgb),.11),transparent 61%);
+  background:radial-gradient(ellipse at 52% 58%,rgba(var(--corten-rgb),.05),transparent 61%);
   pointer-events:none;
   animation:glow-breathe 8s ease-in-out infinite alternate
 }
@@ -430,25 +431,35 @@ to {
   display:grid;
   place-items:center;
   margin:0;
-  transform:translate(-50%,-50%);
+  transform:translate3d(calc(-50% + var(--cup-x,0px)),calc(-50% + var(--cup-y,0px)),var(--cup-z,0px)) rotateX(var(--cup-rotate-x,0deg)) rotateY(var(--cup-rotate-y,0deg));
+  transform-style:preserve-3d;
+  will-change:transform;
   pointer-events:none;
-  animation:cup-arrive .9s .25s both
+  transition:transform .8s cubic-bezier(.18,.75,.25,1),filter .8s ease;
+  animation:cup-arrive .9s .25s both;
+  filter:drop-shadow(0 30px 34px rgba(var(--espresso-rgb),.26))
 }
 .hero-cup-art img {
   width:100%;
   height:100%;
   object-fit:contain;
-  filter:drop-shadow(0 26px 30px rgba(var(--espresso-rgb),.48));
-  animation:cup-float 5.5s 1s ease-in-out infinite
+  filter:drop-shadow(0 22px 25px rgba(var(--espresso-rgb),.46)) drop-shadow(0 3px 2px rgba(var(--copper-rgb),.16));
+  transform:translate3d(0,var(--cup-float-y,0px),36px) rotate(var(--cup-float-rotate,0deg));
+  backface-visibility:hidden;
+  transition:filter .8s ease
+}
+.hero-art.is-interactive .hero-cup-art {
+  filter:drop-shadow(0 34px 36px rgba(var(--espresso-rgb),.3))
 }
 @keyframes cup-arrive {
-  from { opacity:0; transform:translate(-50%,-46%) scale(.96) }
-  to { opacity:1; transform:translate(-50%,-50%) scale(1) }
+  from { opacity:0; scale:.98 }
+  to { opacity:1; scale:1 }
 }
 @keyframes cup-float {
-  0%,100% { transform:translateY(0) rotate(0) }
-  50% { transform:translateY(-9px) rotate(-1deg) }
+  0%,100% { --cup-float-y:0px; --cup-float-rotate:0deg }
+  50% { --cup-float-y:-5px; --cup-float-rotate:-.25deg }
 }
+.hero-cup-art img { animation:cup-float 7s 1s ease-in-out infinite }
 .photo-frame img {
   width:100%;
   height:100%;
@@ -2665,6 +2676,15 @@ h1 {
 }
 .hero-orbit-one,.steam-art path,.coffee-bean,.scroll-cue i,.marquee-track,.sun-mark,.jogja-motif,.location-art svg {
   animation:none!important
+}
+.hero-cup-art {
+  animation:none!important;
+  transition:none!important
+}
+.hero-cup-art img {
+  animation:none!important;
+  transition:none!important;
+  transform:translate3d(0,0,36px)!important
 }
 .steam-art path {
   opacity:.55;
