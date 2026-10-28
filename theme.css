@@ -2978,7 +2978,7 @@ body.motion-ready .reveal:not(.is-visible) {
     padding-inline:16px
   }
   .js-enabled .nav-links {
-    right:var(--gutter);
+    right:calc((100% - min(calc(100% - 2 * var(--gutter)),680px))/2);
     left:auto;
     width:min(360px,calc(100vw - 2 * var(--gutter)));
     max-height:0;
@@ -3008,6 +3008,7 @@ body.motion-ready .reveal:not(.is-visible) {
   }
   .js-enabled .nav-links {
     top:calc(var(--header-height) - 7px);
+    right:calc((100% - min(calc(100% - 2 * var(--gutter)),440px))/2);
     width:min(340px,calc(100vw - 2 * var(--gutter)))
   }
 }
