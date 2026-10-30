@@ -15,16 +15,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./variables.css" />
-  <link rel="stylesheet" href="./theme.css" />
+  <link rel="stylesheet" href="./variables.css?v=2.2" />
+  <link rel="stylesheet" href="./theme.css?v=2.2" />
   <script>document.documentElement.classList.add('js-enabled');</script>
 </head>
 <body>
-  <!-- Header / Navigasi (Sesuai Foto) -->
+  <!-- Header / Navigasi -->
   <header class="site-header" id="top">
     <div class="nav-container page-wrap">
       <a class="brand" href="#top" aria-label="Coffee Bike — Kembali ke atas">
-        <span class="brand-title">coffee <i>bike</i><span class="brand-mark" aria-hidden="true">✦</span></span>
+        <span class="brand-title">coffee <i>bike</i></span>
         <span class="brand-tag">EST. 2021 · PETAMBURAN</span>
       </a>
 
@@ -33,14 +33,16 @@
         <a class="nav-link" href="#menu">Menu &amp; Sajian</a>
         <a class="nav-link" href="#facilities">Fasilitas</a>
         <a class="nav-link" href="#hours">Jam &amp; Lokasi</a>
-        <a class="nav-contact-mobile button button-terracotta" href="https://wa.me/6287867380424?text=Halo%20Coffee%20Bike,%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer">
-          Chat WhatsApp <span aria-hidden="true">↗</span>
+        <a class="nav-visit nav-visit-menu button button-outline-sm" href="#hours">
+          <span>Kunjungi Coffee Bike</span>
+          <span class="btn-arrow" aria-hidden="true">↗</span>
         </a>
       </nav>
 
       <div class="header-actions">
-        <a class="nav-contact-desktop button button-outline-sm" href="https://wa.me/6287867380424?text=Halo%20Coffee%20Bike,%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer">
-          <span>Hubungi Kami</span>
+        <a class="nav-visit nav-visit-bar button button-outline-sm" href="#hours" aria-label="Kunjungi Coffee Bike">
+          <span class="visit-label-full">Kunjungi Coffee Bike</span>
+          <span class="visit-label-short">Kunjungi</span>
           <span class="btn-arrow" aria-hidden="true">↗</span>
         </a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Buka menu navigasi">
@@ -52,7 +54,7 @@
   </header>
 
   <main>
-    <!-- HERO SECTION (Sesuai Foto) -->
+    <!-- HERO SECTION -->
     <section class="hero-section" id="home" aria-labelledby="hero-title">
       <div class="hero-wrap page-wrap">
         <div class="hero-content">
@@ -84,7 +86,7 @@
           <div class="hero-status-bar reveal">
             <div class="status-live">
               <span class="live-dot" id="liveDot" aria-hidden="true"></span>
-              <span class="live-text" id="liveStatusText">Tutup · Buka Hari Ini Pukul 11.00 WIB</span>
+              <span class="live-text" id="liveStatusText">Buka Hari Ini · 11.00 — 00.00 WIB</span>
             </div>
             <div class="status-features">
               <span>✦ Wi-Fi Kencang</span>
@@ -97,7 +99,7 @@
         <div class="hero-showcase reveal">
           <div class="vintage-frame">
             <div class="video-container">
-              <video class="hero-video" id="heroVideo" autoplay loop muted playsinline preload="metadata" poster="./Aset/optimized/IMG_2723.webp" aria-label="Suasana seduhan kopi di Coffee Bike">
+              <video class="hero-video" id="heroVideo" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="./Aset/optimized/IMG_2723.webp" aria-label="Suasana seduhan kopi di Coffee Bike">
                 <source src="./Aset/optimized/Header/header%20coffee.mp4" type="video/mp4" />
               </video>
               <div class="video-overlay" aria-hidden="true"></div>
@@ -132,7 +134,7 @@
       </div>
     </section>
 
-    <!-- VINTAGE ACCENT RIBBON (Sesuai Foto) -->
+    <!-- VINTAGE ACCENT RIBBON -->
     <div class="vintage-ribbon" aria-hidden="true">
       <div class="ribbon-track">
         <span>✦ HIDANGAN AUTENTIK LITTLE JOGJA</span>
@@ -145,6 +147,8 @@
         <span>✦ WORKING SPACE TENANG</span>
       </div>
     </div>
+
+    <!-- SECTION 01 — TENTANG COFFEE BIKE -->
     <section class="story section-shell" id="about-us" aria-labelledby="about-title">
       <div class="section-index"><span>01</span><span>TENTANG COFFEE BIKE</span></div>
       <div class="story-grid">
@@ -155,6 +159,7 @@
       <div class="story-motion-word reveal" aria-label="Ngopi" role="img"><span aria-hidden="true">ngopi</span></div>
     </section>
 
+    <!-- SECTION 02 — MENU & SAJIAN -->
     <section class="coffee-section" id="menu" aria-labelledby="menu-title">
       <div class="section-shell coffee-inner">
         <div class="section-index"><span>02</span><span>DARI DAPUR COFFEE BIKE</span></div>
@@ -191,13 +196,15 @@
       </div>
     </section>
 
+    <!-- SECTION 03 — LITTLE JOGJA -->
     <section class="little-jogja section-shell" id="little-jogja" aria-labelledby="jogja-title">
       <div class="section-index"><span>03</span><span>LITTLE JOGJA</span></div>
-        <div class="little-jogja-copy reveal"><p class="eyebrow">Hidangan khas, suasana santai</p><h2 id="jogja-title">Sejenak di<br /><em>Little Jogja.</em></h2><p>Little Jogja memadukan hidangan tradisional Indonesia dengan suasana kedai kopi yang santai.</p><a class="underlined-link" href="#menu">Jelajahi menu makanan <span aria-hidden="true">↗</span></a></div>
+      <div class="little-jogja-copy reveal"><p class="eyebrow">Hidangan khas, suasana santai</p><h2 id="jogja-title">Sejenak di<br /><em>Little Jogja.</em></h2><p>Little Jogja memadukan hidangan tradisional Indonesia dengan suasana kedai kopi yang santai.</p><a class="underlined-link" href="#menu">Jelajahi menu makanan <span aria-hidden="true">↗</span></a></div>
       <figure class="jogja-photo photo-frame reveal"><img src="./Aset/optimized/Menu/3.png" alt="Nasi, lauk berbumbu, lalapan, dan sambal dari Little Jogja" loading="lazy" decoding="async" width="1080" height="1080" /><figcaption><span>LITTLE JOGJA</span><span>TRADISI DALAM SUASANA BARU</span></figcaption></figure>
       <svg class="jogja-motif" viewBox="0 0 220 220" fill="none" aria-hidden="true"><circle cx="110" cy="110" r="87"/><circle cx="110" cy="110" r="69"/><path d="M110 9v202M9 110h202M39 39l142 142M181 39 39 181"/><path d="M110 36c9 28 18 38 45 47-27 9-36 18-45 46-9-28-18-37-45-46 27-9 36-19 45-47Z"/></svg>
     </section>
 
+    <!-- SECTION 04 — FASILITAS -->
     <section class="facilities section-shell" id="facilities" aria-labelledby="facilities-title">
       <div class="section-index"><span>04</span><span>FASILITAS COFFEE BIKE</span></div>
       <div class="facilities-heading reveal"><div><p class="eyebrow">Ruang untuk bekerja dan berkumpul</p><h2 id="facilities-title">Datang untuk bekerja.<br /><em>Tinggal lebih lama.</em></h2></div><p>Ruang yang mendukung waktu santai, fokus bekerja, presentasi, dan kegiatan bersama.</p></div>
@@ -212,6 +219,7 @@
       <a class="underlined-link facility-contact" href="tel:087867380424">Tanya tentang ruangan <span aria-hidden="true">↗</span></a>
     </section>
 
+    <!-- SECTION 05 — WAKTU BERKUNJUNG -->
     <section class="hours-section" id="hours" aria-labelledby="hours-title">
       <div class="hours-wrap section-shell">
         <div class="hours-heading reveal"><p class="eyebrow">Mampir, duduk lebih lama</p><h2 id="hours-title">Waktu<br /><em>berkunjung.</em></h2><span class="open-badge"><i aria-hidden="true"></i> BUKA SETIAP HARI</span></div>
@@ -222,11 +230,13 @@
       </div>
     </section>
 
+    <!-- SECTION 06 — LOKASI & PETUNJUK -->
     <section class="location-section section-shell" id="location" aria-labelledby="location-title">
       <div class="section-index"><span>06</span><span>ALAMAT & PETUNJUK</span></div>
       <div class="location-layout"><div class="location-copy reveal"><p class="eyebrow">Coffee Bike · Jakarta Barat</p><h2 id="location-title">Mari singgah<br /><em>di Coffee Bike.</em></h2><address>Jl. Dr. Muwardi I No. 30, RT.1/RW.4<br />Grogol, Kec. Grogol Petamburan<br />Kota Jakarta Barat, DKI Jakarta 11470</address><div class="location-actions"><a class="button button-light" href="https://www.google.com/maps/place/Coffee+Bike/@-6.1644282,106.7895114,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f7c45e7b1c2f:0x4c0c5a165e61b732!8m2!3d-6.1644335!4d106.7920917!16s%2Fg%2F11rxwl72xc?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Buka petunjuk arah <span aria-hidden="true">↗</span></a><a class="phone-link" href="tel:087867380424">0878 6738 0424</a></div></div><div class="location-art reveal" aria-hidden="true"><svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="map-circle" cx="150" cy="150" r="116"/><path d="M150 63c-38 0-69 30-69 67 0 49 69 111 69 111s69-62 69-111c0-37-31-67-69-67Z"/><circle cx="150" cy="130" r="25"/><path d="M132 130c9-11 27-11 36 0m-25 0h.1m14 0h.1M32 151h28m180 0h28M149 20v25m0 210v25" stroke-linecap="round"/></svg><span>JAKARTA BARAT<br />INDONESIA</span></div></div>
     </section>
 
+    <!-- SECTION 07 — SOSIAL -->
     <section class="social-section section-shell" id="social" aria-labelledby="social-title">
       <p class="eyebrow">Ikuti kabar terbaru</p><h2 id="social-title">Sampai jumpa<br /><em>di sana.</em></h2><p class="social-copy">Temukan kabar, suasana, dan menu terbaru Coffee Bike di Instagram dan TikTok.</p>
       <div class="social-actions"><a class="button button-dark" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.tiktok.com/@coffee_bikee" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a></div>
@@ -236,16 +246,16 @@
 
   <footer class="footer">
     <div class="footer-main">
-      <a class="footer-brand" href="#home" aria-label="Coffee Bike — kembali ke beranda">coffee <i>bike</i><span aria-hidden="true">✳</span></a>
+      <a class="footer-brand" href="#top" aria-label="Coffee Bike — kembali ke beranda">coffee <i>bike</i></a>
       <div class="footer-contact"><p>Your Space,<br /><em>Your Pace.</em></p><address>Coffee Bike · Petamburan, Jakarta Barat<br />Jl. Dr. Muwardi I No. 30, RT.1/RW.4</address><a href="tel:087867380424">0878 6738 0424</a></div>
       <nav class="footer-nav" aria-label="Tautan footer"><a href="#menu">Menu</a><a href="#about-us">About Us</a><a href="#facilities">Fasilitas</a><a href="#hours">Jam buka & lokasi</a><a href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@coffee_bikee" target="_blank" rel="noopener noreferrer">TikTok ↗</a></nav>
     </div>
-    <div class="footer-bottom"><span>COFFEE BIKE · PETAMBURAN, JAKARTA BARAT</span><span>© <span id="year"></span> COFFEE BIKE</span><a href="#home">KEMBALI KE ATAS ↑</a></div>
+    <div class="footer-bottom"><span>COFFEE BIKE · PETAMBURAN, JAKARTA BARAT</span><span>© <span id="year"></span> COFFEE BIKE</span><a href="#top">KEMBALI KE ATAS ↑</a></div>
   </footer>
 
-  <!-- Floating WhatsApp Barista Pill (Sesuai Foto) -->
+  <!-- Floating WhatsApp Barista Pill -->
   <aside class="floating-contact" aria-label="Kontak Cepat">
-    <a class="floating-pill" href="https://wa.me/6287867380424?text=Halo%20Coffee%20Bike,%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Coffee Bike">
+    <a class="floating-pill" id="floatingPill" href="https://wa.me/6287867380424?text=Halo%20Coffee%20Bike,%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Coffee Bike">
       <span class="floating-icon" aria-hidden="true">💬</span>
       <span class="floating-label">WhatsApp Barista</span>
     </a>
@@ -253,76 +263,165 @@
 
   <script>
     (() => {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
+      'use strict';
+
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const siteHeader = document.querySelector('.site-header');
       const isMobileNav = window.matchMedia('(max-width: 820px)');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // 1. Mobile Menu Synchronisation
       const syncMenuMode = () => {
         if (!isMobileNav.matches) {
           navLinks.inert = false;
           navLinks.classList.remove('is-open');
           menuToggle.setAttribute('aria-expanded', 'false');
           menuToggle.setAttribute('aria-label', 'Buka menu');
-        } else navLinks.inert = menuToggle.getAttribute('aria-expanded') !== 'true';
+          document.body.classList.remove('menu-open');
+        } else {
+          const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+          navLinks.inert = !isOpen;
+        }
       };
+
       const closeMenu = () => {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.setAttribute('aria-label', 'Buka menu');
         navLinks.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
         syncMenuMode();
       };
-      syncMenuMode();
-      isMobileNav.addEventListener('change', syncMenuMode);
-      menuToggle.addEventListener('click', () => {
-        const open = menuToggle.getAttribute('aria-expanded') !== 'true';
-        menuToggle.setAttribute('aria-expanded', String(open));
-        menuToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
-        navLinks.classList.toggle('is-open', open);
-        navLinks.inert = !open && isMobileNav.matches;
-      });
-      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-      document.addEventListener('keydown', event => {
-        if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
-          closeMenu();
-          menuToggle.focus();
-        }
-      });
-      document.querySelector('#year').textContent = new Date().getFullYear();
 
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const heroVideo = document.querySelector('.hero-video');
-      if (heroVideo && !reduceMotion) heroVideo.play().catch(() => {});
-      const siteHeader = document.querySelector('.site-header');
-      let scrollFrame = 0;
-      const updateScrollEffects = () => {
-        scrollFrame = 0;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
-        siteHeader.style.setProperty('--page-progress', progress.toFixed(4));
-        siteHeader.classList.toggle('is-scrolling', window.scrollY > 8);
+      const toggleMenu = () => {
+        const willOpen = menuToggle.getAttribute('aria-expanded') !== 'true';
+        menuToggle.setAttribute('aria-expanded', String(willOpen));
+        menuToggle.setAttribute('aria-label', willOpen ? 'Tutup menu' : 'Buka menu');
+        navLinks.classList.toggle('is-open', willOpen);
+        document.body.classList.toggle('menu-open', willOpen);
+        navLinks.inert = !willOpen && isMobileNav.matches;
+
+        // Ensure header is never hidden when menu opens
+        if (willOpen && siteHeader) {
+          siteHeader.classList.remove('is-hidden');
+        }
       };
+
+      if (menuToggle && navLinks) {
+        syncMenuMode();
+        isMobileNav.addEventListener('change', syncMenuMode);
+        menuToggle.addEventListener('click', toggleMenu);
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+            closeMenu();
+            menuToggle.focus();
+          }
+        });
+
+        // Close on click outside
+        document.addEventListener('click', event => {
+          if (navLinks.classList.contains('is-open')) {
+            if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+              closeMenu();
+            }
+          }
+        });
+      }
+
+      // 2. Smooth Hide/Show Navbar on Scroll
+      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      let isHeaderHidden = false;
+      let scrollTicking = false;
+      const JITTER_THRESHOLD = 8; // Avoid changes on tiny scroll jitter
+
+      const updateScrollEffects = () => {
+        scrollTicking = false;
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        const isMenuOpen = menuToggle && menuToggle.getAttribute('aria-expanded') === 'true';
+
+        // Keep visible at the very top of the page (<= 20px) or whenever menu is open
+        if (currentScrollY <= 20 || isMenuOpen) {
+          if (isHeaderHidden) {
+            siteHeader.classList.remove('is-hidden');
+            isHeaderHidden = false;
+          }
+        } else {
+          const diff = currentScrollY - lastScrollY;
+          if (diff > JITTER_THRESHOLD && !isHeaderHidden) {
+            // Scrolling DOWN -> hide smoothly
+            siteHeader.classList.add('is-hidden');
+            isHeaderHidden = true;
+          } else if (diff < -JITTER_THRESHOLD && isHeaderHidden) {
+            // Scrolling UP -> reveal smoothly
+            siteHeader.classList.remove('is-hidden');
+            isHeaderHidden = false;
+          }
+        }
+
+        siteHeader.classList.toggle('is-scrolling', currentScrollY > 8);
+        lastScrollY = Math.max(0, currentScrollY);
+      };
+
       window.addEventListener('scroll', () => {
-        if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateScrollEffects);
+        if (!scrollTicking) {
+          scrollTicking = true;
+          window.requestAnimationFrame(updateScrollEffects);
+        }
       }, { passive: true });
       updateScrollEffects();
 
+      // 3. Hero Video Autoplay with Safari/iOS resilience
+      const heroVideo = document.getElementById('heroVideo');
+      if (heroVideo) {
+        heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
+        if (!reduceMotion) {
+          const tryPlay = () => {
+            const promise = heroVideo.play();
+            if (promise !== undefined) {
+              promise.catch(() => {});
+            }
+          };
+          tryPlay();
+          document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && !reduceMotion) tryPlay();
+          });
+        }
+      }
+
+      // 4. Reveal Animations
       const revealItems = document.querySelectorAll('.reveal, .photo-frame, .story-rule');
       if ('IntersectionObserver' in window && !reduceMotion) {
         document.body.classList.add('motion-ready');
-        const observer = new IntersectionObserver((entries, instance) => entries.forEach(entry => {
-          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); instance.unobserve(entry.target); }
-        }), { threshold: .14, rootMargin: '0px 0px -35px 0px' });
+        const observer = new IntersectionObserver((entries, instance) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              instance.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
         revealItems.forEach(item => observer.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add('is-visible'));
       }
 
+      // 5. Active Nav Observer
       if ('IntersectionObserver' in window) {
-        const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          document.querySelectorAll('.nav-link').forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
-        }), { rootMargin: '-38% 0px -56% 0px' });
+        const navObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            document.querySelectorAll('.nav-link').forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          });
+        }, { rootMargin: '-38% 0px -56% 0px' });
         document.querySelectorAll('main section[id]').forEach(section => navObserver.observe(section));
       }
 
-      // Live Opening Hours Calculator for Hero Status Bar
+      // 6. Live Opening Hours Status (Waktu Jakarta UTC+7)
       const updateLiveStatus = () => {
         const liveDot = document.getElementById('liveDot');
         const liveText = document.getElementById('liveStatusText');
@@ -365,6 +464,10 @@
       };
       updateLiveStatus();
       setInterval(updateLiveStatus, 60000);
+
+      // 7. Dynamic Year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
     })();
   </script>
 </body>

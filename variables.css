@@ -32,7 +32,7 @@
   --sans: 'Plus Jakarta Sans', 'DM Sans', Arial, sans-serif;
   --mono: 'IBM Plex Mono', 'Courier New', monospace;
   --page-width: 1240px;
-  --gutter: clamp(20px, 5.6vw, 82px);
+  --gutter: clamp(16px, 4.5vw, 64px);
   --header-height: 74px;
 
   /* New Vintage Home Section Palette */
