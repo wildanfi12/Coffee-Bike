@@ -3013,4 +3013,178 @@ body.motion-ready .reveal:not(.is-visible) {
   }
 }
 
+/* Final small-screen refinements: keep controls readable and layouts fluid. */
+@media(max-width:560px) {
+  html {
+    scroll-padding-top:calc(var(--header-height) + 12px)
+  }
+  body {
+    overflow-x:clip
+  }
+  .section-shell {
+    padding-block:clamp(56px,14vw,70px)
+  }
+  .hero {
+    min-height:0;
+    grid-template-columns:minmax(0,1fr);
+    gap:12px;
+    padding-top:calc(var(--header-height) + 18px);
+    padding-bottom:54px
+  }
+  .hero-copy,
+  .hero-description,
+  .story-copy,
+  .coffee-heading,
+  .facilities-heading,
+  .atmosphere-heading,
+  .location-copy {
+    min-width:0
+  }
+  .hero h1 {
+    font-size:clamp(42px,12vw,58px);
+    line-height:.88
+  }
+  .hero-description {
+    font-size:clamp(15px,4.1vw,17px)
+  }
+  .hero-actions {
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)
+  }
+  .hero-actions .button {
+    min-height:48px;
+    justify-content:center;
+    gap:8px;
+    padding-inline:9px;
+    font-size:clamp(10px,2.8vw,12px);
+    text-align:center
+  }
+  .hero-signoff {
+    grid-template-columns:auto auto minmax(0,1fr);
+    column-gap:7px
+  }
+  .hero-signoff>span:last-child {
+    max-width:100%;
+    white-space:normal;
+    text-align:right;
+    line-height:1.35
+  }
+  .hero-art {
+    min-height:clamp(285px,83vw,365px)
+  }
+  .story-grid,
+  .menu-grid,
+  .little-jogja,
+  .location-layout,
+  .hours-wrap {
+    min-width:0
+  }
+  .story-grid {
+    padding-inline:0
+  }
+  .menu-group {
+    padding-inline:0
+  }
+  .menu-list li {
+    gap:10px;
+    font-size:clamp(15px,4.2vw,17px)
+  }
+  .menu-list li>span:first-child {
+    min-width:0
+  }
+  .menu-list small {
+    overflow-wrap:anywhere
+  }
+  .facility-list {
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .facility-list article {
+    min-width:0;
+    min-height:0;
+    padding-block:16px
+  }
+  .facility-list h3 {
+    font-size:clamp(17px,5vw,21px);
+    overflow-wrap:anywhere
+  }
+  .facility-list p {
+    font-size:13px;
+    line-height:1.5
+  }
+  .hours-row {
+    align-items:flex-start
+  }
+  .hours-row>div,
+  .time-label {
+    min-width:0
+  }
+  .location-actions {
+    align-items:stretch;
+    flex-direction:column
+  }
+  .location-actions .button {
+    width:100%;
+    justify-content:space-between
+  }
+  .location-actions .phone-link {
+    min-height:44px;
+    display:inline-flex;
+    align-items:center
+  }
+  .social-actions {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px
+  }
+  .social-actions .button {
+    min-width:0;
+    padding-inline:10px;
+    gap:8px
+  }
+  .footer-main {
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)
+  }
+  .footer-contact,
+  .footer-nav {
+    min-width:0
+  }
+  .footer-contact address {
+    overflow-wrap:anywhere
+  }
+}
+
+@media(max-width:380px) {
+  .hero-actions,
+  .social-actions {
+    grid-template-columns:minmax(0,1fr)
+  }
+  .hero-actions .button,
+  .social-actions .button {
+    justify-content:space-between;
+    padding-inline:14px;
+    font-size:12px
+  }
+  .hero-signoff {
+    grid-template-columns:1fr auto
+  }
+  .hero-signoff>span:first-child {
+    grid-column:1
+  }
+  .hero-signoff-mark {
+    grid-column:2;
+    grid-row:1
+  }
+  .hero-signoff>span:last-child {
+    grid-column:1/-1;
+    grid-row:2;
+    justify-self:start;
+    text-align:left
+  }
+  .footer-main {
+    grid-template-columns:minmax(0,1fr)
+  }
+  .footer-nav {
+    grid-column:auto
+  }
+}
+
 
