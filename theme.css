@@ -1366,128 +1366,353 @@ h1 em, h2 em, h3 em {
   margin-top: 4px;
 }
 
-/* 12. SECTION 06 — LOKASI & PETUNJUK
+/* 12. SECTION 06 — KONTAK & LOKASI
    ========================================================================== */
-.location-section {
+.contact-section {
   position: relative;
-  background: var(--green);
-  color: var(--cream);
-}
-
-.location-section .section-index {
-  border-color: rgba(var(--white-rgb), .28);
-  color: rgba(var(--white-rgb), .78);
-}
-
-.location-section .section-index span:first-child {
-  color: var(--cream);
-}
-
-.location-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: clamp(28px, 5vw, 64px);
-  padding-top: 24px;
+  background-color: var(--bg-paper);
+  border-top: 1px solid var(--border-subtle);
   width: 100%;
 }
 
-.location-copy h2 {
-  color: var(--cream);
+.anchor-target {
+  position: relative;
+  top: calc(-1 * var(--header-height));
+  display: block;
+  visibility: hidden;
+  height: 0;
 }
 
-.location-copy h2 em {
-  color: var(--copper);
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(32px, 5vw, 68px);
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
 }
 
-.location-copy address {
-  margin: 18px 0 24px;
-  color: rgba(var(--paper-rgb), .9);
-  font-style: normal;
-  font-size: 1rem;
+.contact-info,
+.contact-map-wrapper {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-title {
+  margin-bottom: 16px;
+}
+
+.contact-desc {
+  font-size: clamp(0.95rem, 2.4vw, 1.05rem);
   line-height: 1.65;
+  color: var(--ink-secondary);
+  max-width: 520px;
+  margin-bottom: 26px;
 }
 
-.location-actions {
+/* Contact Cards (Address & Hours) */
+.contact-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.contact-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-header {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.phone-link {
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--copper);
-  padding: 9px 16px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(var(--paper-rgb), .25);
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-}
-
-.phone-link:hover {
-  background: rgba(var(--paper-rgb), .1);
-  border-color: var(--copper);
-}
-
-.location-art {
-  display: flex;
-  flex-direction: column;
+.contact-card-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  width: 100%;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: var(--terracotta-light);
+  color: var(--terracotta);
+  flex-shrink: 0;
 }
 
-.location-art svg {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  stroke: var(--copper);
-  stroke-width: 1.2;
-}
-
-.location-art span {
+.contact-card-label {
   font-family: var(--mono);
   font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  color: rgba(var(--paper-rgb), .7);
-  margin-top: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+  font-weight: 500;
 }
 
-/* 13. SECTION 07 — MEDIA SOSIAL
-   ========================================================================== */
-.social-section {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background: var(--paper);
+.contact-live-pill {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-paper-alt);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ink-secondary);
 }
 
-.social-copy {
-  max-width: 460px;
-  margin: 14px auto 24px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--espresso);
+.contact-address-text {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-primary);
+  margin-bottom: 14px;
 }
 
-.social-actions {
+.contact-address-text strong {
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.contact-address-actions {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
-.social-handle {
+/* Schedule List */
+.contact-hours-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--border-subtle);
+  font-size: 0.92rem;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.schedule-day {
+  color: var(--ink-secondary);
+  font-weight: 500;
+}
+
+.schedule-time {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--ink-primary);
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.schedule-time small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+/* WhatsApp & Phone Action Group */
+.contact-action-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 26px;
+}
+
+.button-whatsapp {
+  background-color: #1F6B45;
+  color: #FFFDF9;
+  border: 1px solid #1F6B45;
+  box-shadow: 0 4px 14px rgba(31, 107, 69, 0.25);
+  font-weight: 600;
+}
+
+.button-whatsapp:hover {
+  background-color: #175436;
+  border-color: #175436;
+  box-shadow: 0 6px 20px rgba(31, 107, 69, 0.35);
+  transform: translateY(-2px);
+  color: #FFFDF9;
+}
+
+.btn-svg-icon {
+  flex-shrink: 0;
+}
+
+/* Social Wrap & Pills */
+.contact-social-wrap {
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-tag {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.social-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.social-pill:hover {
+  background-color: var(--bg-paper-alt);
+  border-color: var(--ink-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-handle-text {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+.social-arrow {
+  color: var(--terracotta);
+  font-weight: 600;
+  transition: transform var(--transition-fast);
+}
+
+.social-pill:hover .social-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Interactive Map Frame */
+.contact-map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.vintage-map-frame {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-frame-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  background-color: var(--bg-paper-alt);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.map-frame-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.map-pin-indicator {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.map-title-text {
+  display: block;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink-primary);
+  overflow-wrap: break-word;
+}
+
+.map-coord-text {
   display: block;
   font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+  overflow-wrap: break-word;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 46vw, 490px);
+  background-color: var(--bg-paper-alt);
+  overflow: hidden;
+}
+
+.contact-map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: contrast(1.02);
+}
+
+.map-frame-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+}
+
+.map-footer-note {
+  font-family: var(--mono);
   font-size: 0.74rem;
-  letter-spacing: 0.14em;
-  color: var(--muted);
+  color: var(--ink-muted);
+  overflow-wrap: break-word;
 }
 
 /* 14. FOOTER
@@ -1638,9 +1863,13 @@ h1 em, h2 em, h3 em {
   .hero-wrap,
   .story-grid,
   .little-jogja,
-  .hours-wrap,
-  .location-layout {
+  .hours-wrap {
     grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
 
@@ -1655,7 +1884,7 @@ h1 em, h2 em, h3 em {
   .menu-bento-donut { grid-column: span 3; }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 890px) {
   :root {
     --header-height: 66px;
   }
@@ -1841,6 +2070,40 @@ h1 em, h2 em, h3 em {
     flex-direction: column;
     text-align: center;
   }
+
+  .contact-action-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-action-group .button {
+    width: 100%;
+  }
+
+  .social-pills {
+    flex-direction: column;
+  }
+
+  .social-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .map-frame-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .map-open-btn {
+    width: 100%;
+  }
+
+  .map-frame-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -1854,6 +2117,10 @@ h1 em, h2 em, h3 em {
 
   .hero-title, h1 {
     font-size: 2rem;
+  }
+
+  .map-coord-text {
+    display: none;
   }
 }
 
