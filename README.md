@@ -11,4 +11,4 @@ Open `index.html` in a browser. The site has no build step or package dependenci
 - `index.html` — page content and interactions
 - `theme.css` — layout, responsive styles, and motion
 - `variables.css` — brand palette and type tokens
-- `Aset/optimized/` — optimized WebP menu photography used by the page
+- `Aset/optimized/` — the hero video and four menu images used by the page
