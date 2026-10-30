@@ -19,7 +19,7 @@
 <body>
   <header class="site-header">
     <nav class="nav page-wrap" aria-label="Navigasi utama">
-      <a class="wordmark" href="#home" aria-label="Coffee Bike — beranda">coffee <i>bike</i><span aria-hidden="true">✳︎</span></a>
+      <a class="wordmark" href="#home" aria-label="Coffee Bike — beranda">coffee <i>bike</i></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu"><span></span><span></span></button>
       <div class="nav-links" id="nav-links">
         <a class="nav-link" href="#menu">Menu</a>
@@ -33,7 +33,7 @@
 
   <main>
     <section class="hero page-wrap" id="home" aria-labelledby="hero-title">
-      <video class="hero-video" muted loop playsinline preload="metadata" aria-hidden="true"><source src="./Aset/optimized/Header/header%20coffee.mp4" type="video/mp4" /></video>
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="./Aset/optimized/Header/header%20coffee.mp4" type="video/mp4" /></video>
       <div class="hero-video-tint" aria-hidden="true"></div>
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> COFFEE · LITTLE JOGJA · PETAMBURAN</p>
@@ -198,7 +198,19 @@
 
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const heroVideo = document.querySelector('.hero-video');
-      if (heroVideo && !reduceMotion) heroVideo.play().catch(() => {});
+      if (heroVideo) {
+        if (reduceMotion) {
+          heroVideo.pause();
+        } else {
+          const playHeroVideo = () => {
+            if (document.hidden) return;
+            const playback = heroVideo.play();
+            if (playback && typeof playback.catch === 'function') playback.catch(() => {});
+          };
+          playHeroVideo();
+          document.addEventListener('visibilitychange', playHeroVideo);
+        }
+      }
       const heroArt = document.querySelector('.hero-art');
       const heroCup = document.querySelector('.hero-cup-art');
       const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
