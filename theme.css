@@ -389,32 +389,44 @@ h1 em, h2 em, h3 em {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border-medium);
   background: var(--bg-card);
-  gap: 5px;
+  gap: 4px;
   flex-shrink: 0;
   cursor: pointer;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(30, 22, 19, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle:hover,
+.menu-toggle[aria-expanded="true"] {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
 }
 
 .menu-toggle .bar {
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 17px;
+  height: 1.8px;
   background-color: var(--ink-primary);
-  border-radius: 2px;
-  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  border-radius: 1px;
+  transition: transform var(--transition-normal), background-color var(--transition-fast);
+}
+
+.menu-toggle:hover .bar,
+.menu-toggle[aria-expanded="true"] .bar {
+  background-color: #FFFFFF;
 }
 
 .menu-toggle[aria-expanded="true"] .bar:first-child {
-  transform: translateY(3.5px) rotate(45deg);
+  transform: translateY(3px) rotate(45deg);
 }
 
 .menu-toggle[aria-expanded="true"] .bar:last-child {
-  transform: translateY(-3.5px) rotate(-45deg);
+  transform: translateY(-3px) rotate(-45deg);
 }
 
 /* 5. HERO SECTION
@@ -767,15 +779,22 @@ h1 em, h2 em, h3 em {
 .story-copy {
   position: relative;
   padding-top: 4px;
-  color: var(--espresso);
-  font: 400 16.5px/1.75 var(--sans);
 }
 
-.dropcap {
+.story-copy p {
+  margin: 0;
+  color: var(--espresso);
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.4vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.dropcap,
+.story-copy .dropcap {
   float: left;
   font-family: var(--serif);
-  font-size: 3.4rem;
-  line-height: 0.82;
+  font-size: clamp(3.2rem, 4.5vw, 4.2rem);
+  line-height: 0.8;
   padding: 4px 10px 0 0;
   color: var(--corten);
   font-weight: 600;
@@ -1122,9 +1141,9 @@ h1 em, h2 em, h3 em {
   position: relative;
   margin: 0;
   border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, #FFFDF9 0%, #F5ECE0 100%);
+  background: #FAF6F0;
   border: 1px solid var(--border-medium);
-  padding: clamp(16px, 3.5vw, 32px);
+  padding: clamp(24px, 4vw, 40px) clamp(20px, 3.5vw, 36px) 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1133,16 +1152,15 @@ h1 em, h2 em, h3 em {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
-  min-height: 320px;
 }
 
 .jogja-photo img {
   width: 100%;
-  max-width: 440px;
+  max-width: 520px;
   height: auto;
-  max-height: 360px;
+  max-height: 400px;
   object-fit: contain;
-  filter: drop-shadow(0 16px 28px rgba(36, 26, 22, 0.12));
+  filter: drop-shadow(0 14px 26px rgba(36, 26, 22, 0.1));
   transition: transform var(--transition-normal);
 }
 
@@ -1153,26 +1171,26 @@ h1 em, h2 em, h3 em {
 .jogja-photo figcaption {
   width: 100%;
   margin-top: 16px;
-  padding-top: 10px;
+  padding-top: 12px;
   border-top: 1px solid var(--border-subtle);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   color: var(--muted);
 }
 
 .jogja-motif {
   position: absolute;
   z-index: 0;
-  bottom: 16px;
-  left: 12px;
-  width: 100px;
-  height: 100px;
+  bottom: 24px;
+  left: 24px;
+  width: 120px;
+  height: 120px;
   color: var(--corten);
-  opacity: 0.15;
+  opacity: 0.22;
   pointer-events: none;
   animation: orbit-turn 70s linear infinite;
 }
@@ -1373,6 +1391,7 @@ h1 em, h2 em, h3 em {
   background-color: var(--bg-paper);
   border-top: 1px solid var(--border-subtle);
   width: 100%;
+  padding-bottom: clamp(90px, 12vw, 140px);
 }
 
 .anchor-target {
@@ -1812,9 +1831,17 @@ h1 em, h2 em, h3 em {
    ========================================================================== */
 .floating-contact {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   z-index: 85;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+
+.floating-contact.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  pointer-events: none;
 }
 
 .floating-pill {
