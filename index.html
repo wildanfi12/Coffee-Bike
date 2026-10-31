@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./variables.css?v=2.4" />
-  <link rel="stylesheet" href="./theme.css?v=2.4" />
+  <link rel="stylesheet" href="./variables.css?v=2.5" />
+  <link rel="stylesheet" href="./theme.css?v=2.5" />
   <script>document.documentElement.classList.add('js-enabled');</script>
 </head>
 <body>
@@ -59,21 +59,21 @@
     <section class="hero-section" id="home" aria-labelledby="hero-title">
       <div class="hero-wrap page-wrap">
         <div class="hero-content">
-          <div class="hero-badge reveal">
+          <div class="hero-badge">
             <span class="badge-dot" aria-hidden="true"></span>
             <span>KEDAI KOPI &amp; KUDAPAN · SEJAK 2021</span>
           </div>
 
-          <h1 class="hero-title reveal" id="hero-title">
+          <h1 class="hero-title" id="hero-title">
             A Little Pause,<br />
             <em>A Lot of Soul.</em>
           </h1>
 
-          <p class="hero-desc reveal">
+          <p class="hero-desc">
             Ruang teduh di sudut Petamburan untuk menikmati seduhan kopi pilihan, kehangatan rasa masakan Little Jogja, dan jeda yang menenangkan di tengah ritme Jakarta.
           </p>
 
-          <div class="hero-actions reveal">
+          <div class="hero-actions">
             <a class="button button-terracotta" href="#menu">
               <span>Jelajahi Menu</span>
               <span class="btn-arrow" aria-hidden="true">↓</span>
@@ -84,7 +84,7 @@
             </a>
           </div>
 
-          <div class="hero-status-bar reveal">
+          <div class="hero-status-bar">
             <div class="status-live">
               <span class="live-dot" id="liveDot" aria-hidden="true"></span>
               <span class="live-text" id="liveStatusText">Buka Hari Ini · 11.00 — 00.00 WIB</span>
@@ -97,10 +97,10 @@
           </div>
         </div>
 
-        <div class="hero-showcase reveal">
+        <div class="hero-showcase">
           <div class="vintage-frame">
             <div class="video-container">
-              <video class="hero-video" id="heroVideo" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="./Aset/optimized/IMG_2723.webp" aria-label="Suasana seduhan kopi di Coffee Bike">
+              <video class="hero-video" id="heroVideo" autoplay loop muted playsinline webkit-playsinline preload="auto" aria-label="Suasana seduhan kopi di Coffee Bike">
                 <source src="./Aset/optimized/Header/header%20coffee.mp4" type="video/mp4" />
               </video>
               <div class="video-overlay" aria-hidden="true"></div>
@@ -200,9 +200,16 @@
     <!-- SECTION 03 — LITTLE JOGJA -->
     <section class="little-jogja section-shell" id="little-jogja" aria-labelledby="jogja-title">
       <div class="section-index"><span>03</span><span>LITTLE JOGJA</span></div>
-      <div class="little-jogja-copy reveal"><p class="eyebrow">Hidangan khas, suasana santai</p><h2 id="jogja-title">Sejenak di<br /><em>Little Jogja.</em></h2><p>Little Jogja memadukan hidangan tradisional Indonesia dengan suasana kedai kopi yang santai.</p><a class="underlined-link" href="#menu">Jelajahi menu makanan <span aria-hidden="true">↗</span></a></div>
+      <div class="little-jogja-copy reveal">
+        <p class="eyebrow">Hidangan khas, suasana santai</p>
+        <h2 id="jogja-title">Sejenak di<br /><em>Little Jogja.</em></h2>
+        <p>Little Jogja memadukan hidangan tradisional Indonesia dengan suasana kedai kopi yang santai.</p>
+        <a class="underlined-link" href="#menu">Jelajahi menu makanan <span aria-hidden="true">↗</span></a>
+        <div class="jogja-motif-wrap" aria-hidden="true">
+          <svg class="jogja-motif" viewBox="0 0 220 220" fill="none"><circle cx="110" cy="110" r="87"/><circle cx="110" cy="110" r="69"/><path d="M110 9v202M9 110h202M39 39l142 142M181 39 39 181"/><path d="M110 36c9 28 18 38 45 47-27 9-36 18-45 46-9-28-18-37-45-46 27-9 36-19 45-47Z"/></svg>
+        </div>
+      </div>
       <figure class="jogja-photo photo-frame reveal"><img src="./Aset/optimized/Menu/3.png" alt="Nasi, lauk berbumbu, lalapan, dan sambal dari Little Jogja" loading="lazy" decoding="async" width="1080" height="1080" /><figcaption><span>LITTLE JOGJA</span><span>TRADISI DALAM SUASANA BARU</span></figcaption></figure>
-      <svg class="jogja-motif" viewBox="0 0 220 220" fill="none" aria-hidden="true"><circle cx="110" cy="110" r="87"/><circle cx="110" cy="110" r="69"/><path d="M110 9v202M9 110h202M39 39l142 142M181 39 39 181"/><path d="M110 36c9 28 18 38 45 47-27 9-36 18-45 46-9-28-18-37-45-46 27-9 36-19 45-47Z"/></svg>
     </section>
 
     <!-- SECTION 04 — FASILITAS -->
@@ -223,6 +230,7 @@
     <!-- SECTION 05 — WAKTU BERKUNJUNG -->
     <section class="hours-section" id="hours" aria-labelledby="hours-title">
       <div class="hours-wrap section-shell">
+        <div class="section-index"><span>05</span><span>WAKTU BERKUNJUNG</span></div>
         <div class="hours-heading reveal"><p class="eyebrow">Mampir, duduk lebih lama</p><h2 id="hours-title">Waktu<br /><em>berkunjung.</em></h2><span class="open-badge"><i aria-hidden="true"></i> BUKA SETIAP HARI</span></div>
         <div class="hours-list reveal">
           <div class="hours-row"><div><span class="day-label">WEEKDAY</span><h3>Hari kerja</h3></div><div class="time-label">11.00 <span>—</span> 00.00</div></div>

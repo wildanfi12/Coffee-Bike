@@ -1182,15 +1182,19 @@ h1 em, h2 em, h3 em {
   color: var(--muted);
 }
 
+.jogja-motif-wrap {
+  margin-top: 28px;
+  width: 110px;
+  height: 110px;
+  position: relative;
+  pointer-events: none;
+}
+
 .jogja-motif {
-  position: absolute;
-  z-index: 0;
-  bottom: 24px;
-  left: 24px;
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   color: var(--corten);
-  opacity: 0.22;
+  opacity: 0.28;
   pointer-events: none;
   animation: orbit-turn 70s linear infinite;
 }
@@ -1302,6 +1306,18 @@ h1 em, h2 em, h3 em {
   align-items: center;
   gap: clamp(28px, 5vw, 64px);
   width: 100%;
+}
+
+.hours-wrap .section-index {
+  grid-column: 1 / -1;
+  width: 100%;
+  border-bottom-color: var(--line-light);
+  color: rgba(var(--white-rgb), .72);
+  margin-bottom: 24px;
+}
+
+.hours-wrap .section-index span:first-child {
+  color: var(--cream);
 }
 
 .hours-heading h2 {
@@ -1884,6 +1900,19 @@ h1 em, h2 em, h3 em {
   transform: translateY(0);
 }
 
+/* Hero section is above the fold: ensure immediate sharp visibility with zero delay */
+.hero-section .reveal,
+.hero-badge,
+.hero-title,
+.hero-desc,
+.hero-actions,
+.hero-status-bar,
+.hero-showcase {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 /* 17. RESPONSIVE MEDIA QUERIES (TABLET & MOBILE)
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -1991,15 +2020,45 @@ h1 em, h2 em, h3 em {
     gap: 28px;
   }
 
+  .video-container {
+    height: clamp(260px, 56vw, 400px);
+  }
+
   /* Safe positioning for polaroid and stamp on tablet/mobile so they NEVER overflow */
   .vintage-polaroid {
-    position: static;
-    transform: none;
-    -webkit-transform: none;
-    animation: none;
-    -webkit-animation: none;
-    width: min(100%, 280px);
-    margin: 16px auto 0 auto;
+    position: absolute;
+    bottom: -14px;
+    left: 12px;
+    width: 118px;
+    padding: 6px 6px 8px;
+    transform: rotate(-2.5deg);
+    -webkit-transform: rotate(-2.5deg);
+    animation: cup-float 6s ease-in-out infinite;
+    box-shadow: 0 8px 20px rgba(30, 22, 19, 0.16);
+    z-index: 5;
+    margin: 0;
+  }
+
+  .vintage-polaroid .polaroid-photo {
+    height: 85px;
+  }
+
+  .vintage-polaroid .polaroid-caption {
+    margin-top: 5px;
+  }
+
+  .vintage-polaroid .caption-tag {
+    font-size: 0.52rem;
+    letter-spacing: 0.06em;
+  }
+
+  .vintage-polaroid .caption-name {
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+
+  .vintage-polaroid .caption-note {
+    font-size: 0.54rem;
   }
 
   .vintage-stamp {
@@ -2056,14 +2115,41 @@ h1 em, h2 em, h3 em {
   }
 
   .menu-bento {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    gap: 12px;
+    gap: 10px;
   }
 
-  .menu-bento-intro, .menu-bento-card, .menu-bento-word {
-    grid-column: span 1 !important;
-    min-height: 180px;
+  .menu-bento-intro {
+    grid-column: 1 / -1 !important;
+    min-height: auto;
+    padding: 16px 14px;
+  }
+
+  .menu-bento-card {
+    min-height: 150px;
+  }
+
+  .menu-bento-americano {
+    grid-column: 1 !important;
+  }
+
+  .menu-bento-milk {
+    grid-column: 2 !important;
+  }
+
+  .menu-bento-word {
+    grid-column: 1 / -1 !important;
+    min-height: 70px;
+    padding: 12px 14px;
+  }
+
+  .menu-bento-meal {
+    grid-column: 1 !important;
+  }
+
+  .menu-bento-donut {
+    grid-column: 2 !important;
   }
 
   .hours-row {
