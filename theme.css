@@ -2257,3 +2257,104 @@ h1 em, h2 em, h3 em {
     -webkit-animation: none !important;
   }
 }
+
+/* 19. ART DIRECTION REFINEMENT — EDITORIAL DEPTH & RESPONSIVE POLISH
+   ========================================================================== */
+@media (min-width: 1025px) {
+  .hero-section {
+    min-height: min(780px, calc(100vh - var(--header-height)));
+    display: grid;
+    align-items: center;
+    background:
+      radial-gradient(circle at 86% 20%, rgba(var(--corten-rgb), .09), transparent 23rem),
+      linear-gradient(120deg, var(--bg-paper) 0%, #faf5ed 100%);
+  }
+
+  .hero-wrap { grid-template-columns: minmax(0, .9fr) minmax(480px, 1.1fr); }
+  .hero-content { padding-block: 42px; }
+  .hero-title { max-width: 620px; font-size: clamp(4.3rem, 6.7vw, 6.8rem); }
+  .hero-desc { max-width: 490px; font-size: 1.1rem; }
+  .video-container { height: min(56vw, 590px); }
+  .vintage-frame { padding: 14px; border-radius: 4px; transform: rotate(1.15deg); }
+  .vintage-frame::before { content: 'COFFEE BIKE / EST. 2021'; position: absolute; top: 24px; left: 28px; z-index: 2; color: var(--cream); font: 500 10px/1 var(--mono); letter-spacing: .15em; }
+  .vintage-polaroid { width: 218px; bottom: -34px; left: -34px; }
+  .vintage-stamp { width: 108px; height: 108px; top: -22px; right: -22px; }
+  .story-grid { grid-template-columns: .86fr 1.14fr; }
+  .story-motion-word { min-height: 250px; background: linear-gradient(120deg, var(--surface-warm), #e7d4bc); }
+  .story-motion-word span { font-size: clamp(6rem, 13vw, 12rem); }
+  .coffee-heading, .facilities-heading { padding-block: 44px 34px; }
+  .menu-group { padding-block: 46px; }
+  .menu-bento { grid-auto-rows: 210px; gap: 18px; }
+  .menu-bento-card, .menu-bento-intro, .menu-bento-word { border-radius: 3px; }
+  .little-jogja { grid-template-columns: .85fr 1.15fr; }
+  .jogja-photo { padding: 44px 42px 22px; }
+  .facility-list article { min-height: 195px; padding: 30px 26px; }
+  .hours-wrap { grid-template-columns: .8fr 1.2fr; }
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  width: min(38vw, 560px);
+  aspect-ratio: 1;
+  right: -15%;
+  top: -24%;
+  border: 1px solid rgba(var(--corten-rgb), .15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-badge, .open-badge { box-shadow: 0 6px 18px rgba(var(--espresso-rgb), .05); }
+.button { position: relative; overflow: hidden; }
+.button::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.14); transform: translateX(-105%); transition: transform .42s cubic-bezier(.16,1,.3,1); }
+.button:hover::before { transform: translateX(0); }
+.button > * { position: relative; }
+.vintage-frame, .jogja-photo, .vintage-map-frame { transition: box-shadow var(--transition-normal), transform var(--transition-normal); }
+@media (hover: hover) {
+  .vintage-frame:hover { transform: rotate(0deg) translateY(-5px); box-shadow: 0 28px 70px rgba(var(--espresso-rgb), .18); }
+  .jogja-photo:hover, .vintage-map-frame:hover { transform: translateY(-4px); box-shadow: 0 22px 52px rgba(var(--espresso-rgb), .13); }
+  .facility-list article { transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); }
+  .facility-list article:hover { transform: translateY(-3px); }
+}
+
+@media (min-width: 561px) and (max-width: 1024px) {
+  :root { --gutter: clamp(28px, 6vw, 54px); }
+  .hero-section { padding-top: 46px; }
+  .hero-wrap { max-width: 820px; }
+  .hero-content { max-width: 690px; }
+  .hero-title { font-size: clamp(3.8rem, 8vw, 5.4rem); }
+  .hero-showcase { margin-top: 10px; }
+  .video-container { height: clamp(360px, 56vw, 520px); }
+  .story-grid { grid-template-columns: .75fr 1.25fr; gap: 42px; }
+  .little-jogja { grid-template-columns: .85fr 1.15fr; }
+  .hours-wrap { grid-template-columns: .75fr 1.25fr; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .contact-map-wrapper { align-self: stretch; }
+  .map-container { height: 100%; min-height: 390px; }
+}
+
+@media (max-width: 560px) {
+  .section-shell { padding-block: 58px; }
+  .hero-section { padding-top: 28px; padding-bottom: 72px; }
+  .hero-badge { font-size: .62rem; letter-spacing: .08em; padding: 6px 10px; }
+  .hero-desc { font-size: .98rem; }
+  .status-features { gap: 8px 13px; font-size: .66rem; }
+  .vintage-frame { padding: 7px; border-radius: 12px; }
+  .video-container { height: 290px; border-radius: 8px; }
+  .vintage-polaroid { left: 8px; bottom: -18px; width: 124px; }
+  .vintage-stamp { right: 7px; top: -11px; }
+  .story-motion-word { min-height: 128px; }
+  .story-motion-word span { font-size: clamp(3.4rem, 18vw, 5.6rem); }
+  .section-index { margin-bottom: 25px; }
+  .coffee-heading, .facilities-heading { display: block; padding-block: 10px 26px; }
+  .coffee-heading > p, .facilities-heading > p { margin-top: 16px; }
+  .menu-list li { font-size: .92rem; }
+  .jogja-photo { padding: 18px 16px 14px; border-radius: 12px; }
+  .jogja-photo figcaption { align-items: flex-start; flex-direction: column; gap: 5px; font-size: .61rem; }
+  .jogja-motif-wrap { width: 82px; height: 82px; margin-top: 20px; }
+  .hours-row { padding: 18px; border-radius: 8px; }
+  .contact-card { padding: 18px; }
+  .map-container { height: 300px; }
+  .footer { padding-inline: var(--gutter); }
+  .footer-main, .footer-bottom { max-width: var(--page-width); margin-inline: auto; }
+}
