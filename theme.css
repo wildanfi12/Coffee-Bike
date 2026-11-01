@@ -816,10 +816,10 @@ h1 em, h2 em, h3 em {
 .story-rule {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 620px;
   height: 20px;
-  margin: 32px auto;
-  opacity: 0.45;
+  margin: 28px auto 0;
+  opacity: 0.4;
   overflow: hidden;
 }
 
@@ -828,35 +828,6 @@ h1 em, h2 em, h3 em {
   height: 100%;
   stroke: var(--espresso);
   fill: none;
-}
-
-.story-motion-word {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: clamp(120px, 16vw, 190px);
-  margin: 24px 0 0 0;
-  padding: 16px 20px;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-medium);
-  background: var(--surface-warm);
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.story-motion-word span {
-  display: block;
-  padding: 0;
-  color: var(--forest-deep);
-  font: 700 clamp(40px, 13vw, 108px)/1.1 var(--sans);
-  letter-spacing: -0.04em;
-  text-transform: lowercase;
-  text-align: center;
-  white-space: nowrap;
-  user-select: none;
 }
 
 /* 8. SECTION 02 — MENU & SAJIAN
@@ -2539,8 +2510,6 @@ h1 em, h2 em, h3 em {
   .vintage-polaroid { width: 218px; bottom: -34px; left: -34px; }
   .vintage-stamp { width: 108px; height: 108px; top: -22px; right: -22px; }
   .story-grid { grid-template-columns: .86fr 1.14fr; }
-  .story-motion-word { min-height: 250px; background: linear-gradient(120deg, var(--surface-warm), #e7d4bc); }
-  .story-motion-word span { font-size: clamp(6rem, 13vw, 12rem); }
   .coffee-heading, .facilities-heading { padding-block: 44px 34px; }
   .menu-group { padding-block: 46px; }
   .menu-bento { grid-auto-rows: 210px; gap: 18px; }
@@ -2584,23 +2553,69 @@ h1 em, h2 em, h3 em {
   .hero-title { font-size: clamp(3.8rem, 8vw, 5.4rem); }
   .hero-showcase { margin-top: 10px; }
   .video-container { height: clamp(360px, 56vw, 520px); }
-  .story-grid { grid-template-columns: .75fr 1.25fr; gap: 42px; }
-  .little-jogja { grid-template-columns: .85fr 1.15fr; }
-  .hours-wrap { grid-template-columns: .75fr 1.25fr; }
-  .contact-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-  .contact-map-wrapper { align-self: stretch; }
-  .map-container { height: 100%; min-height: 390px; }
+  .vintage-polaroid { width: 175px; bottom: -24px; left: -20px; }
+  .vintage-stamp { width: 92px; height: 92px; top: -16px; right: -16px; }
 
-  /* Tablet Menu Filter & Bento */
-  .menu-filter-bar { padding-block: 14px; }
+  /* Tablet Story refinement */
+  .story-grid {
+    grid-template-columns: .8fr 1.2fr;
+    gap: clamp(24px, 4vw, 38px);
+    align-items: start;
+    padding-bottom: 12px;
+  }
+  .story-title h2 { font-size: clamp(2.8rem, 5.5vw, 3.8rem); }
+  .story-copy p { font-size: 1.15rem; line-height: 1.7; }
+  .dropcap, .story-copy .dropcap { font-size: 3.6rem; padding: 4px 8px 0 0; }
+  .story-rule { max-width: 480px; margin-top: 24px; opacity: 0.35; }
+
+  /* Tablet Menu Filter Bar & Pills */
+  .menu-filter-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding-block: 16px;
+    margin-bottom: 30px;
+  }
+  .menu-filter-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .menu-filter-pills {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  .menu-filter-btn {
+    flex: 1;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  /* Tablet Bento Grid (Default & Filtered) */
+  .menu-bento {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: clamp(170px, 22vw, 210px);
+    gap: 14px;
+  }
+  .menu-bento-intro {
+    grid-column: span 6 !important;
+    grid-row: span 1 !important;
+    min-height: 130px;
+    padding: 22px 24px;
+  }
   .menu-bento.bento-filter-coffee,
   .menu-bento.bento-filter-food {
     grid-template-columns: repeat(6, 1fr);
   }
   .menu-bento.bento-filter-coffee .menu-bento-intro,
   .menu-bento.bento-filter-food .menu-bento-intro {
-    grid-column: span 6;
-    grid-row: span 1;
+    grid-column: span 6 !important;
+    grid-row: span 1 !important;
     min-height: 120px;
   }
   .menu-bento.bento-filter-coffee .menu-bento-americano,
@@ -2618,11 +2633,17 @@ h1 em, h2 em, h3 em {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .little-jogja { grid-template-columns: .85fr 1.15fr; }
+  .hours-wrap { grid-template-columns: .75fr 1.25fr; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .contact-map-wrapper { align-self: stretch; }
+  .map-container { height: 100%; min-height: 390px; }
 }
 
 @media (max-width: 560px) {
-  .section-shell { padding-block: 58px; }
-  .hero-section { padding-top: 28px; padding-bottom: 72px; }
+  .section-shell { padding-block: 52px; }
+  .hero-section { padding-top: 26px; padding-bottom: 68px; }
   .hero-badge { font-size: .62rem; letter-spacing: .08em; padding: 6px 10px; }
   .hero-desc { font-size: .98rem; }
   .status-features { gap: 8px 13px; font-size: .66rem; }
@@ -2630,33 +2651,41 @@ h1 em, h2 em, h3 em {
   .video-container { height: 290px; border-radius: 8px; }
   .vintage-polaroid { left: 8px; bottom: -18px; width: 124px; }
   .vintage-stamp { right: 7px; top: -11px; }
-  .story-motion-word { min-height: 128px; }
-  .story-motion-word span { font-size: clamp(3.4rem, 18vw, 5.6rem); }
-  .section-index { margin-bottom: 25px; }
-  .coffee-heading, .facilities-heading { display: block; padding-block: 10px 26px; }
-  .coffee-heading > p, .facilities-heading > p { margin-top: 16px; }
-  .menu-list li { font-size: .92rem; }
-  .jogja-photo { padding: 18px 16px 14px; border-radius: 12px; }
-  .jogja-photo figcaption { align-items: flex-start; flex-direction: column; gap: 5px; font-size: .61rem; }
-  .jogja-motif-wrap { width: 82px; height: 82px; margin-top: 20px; }
-  .hours-row { padding: 18px; border-radius: 8px; }
-  .contact-card { padding: 18px; }
-  .map-container { height: 300px; }
-  .footer { padding-inline: var(--gutter); }
-  .footer-main, .footer-bottom { max-width: var(--page-width); margin-inline: auto; }
 
-  /* Mobile Menu Filter & Bento */
+  /* Mobile Story refinement */
+  .story.section-shell { padding-block: 46px; }
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+  .story-title .eyebrow { margin-bottom: 6px; font-size: 0.68rem; }
+  .story-title h2 { font-size: clamp(2.3rem, 9.5vw, 3.1rem); line-height: 1.08; margin: 0; }
+  .story-copy p { font-size: 1.05rem; line-height: 1.65; }
+  .dropcap, .story-copy .dropcap { font-size: 2.9rem; line-height: 0.82; padding: 2px 8px 0 0; }
+  .hand-note { margin-top: 14px; font-size: 1.12rem; }
+  .story-rule { max-width: 240px; margin-top: 20px; height: 16px; opacity: 0.35; }
+
+  .section-index { margin-bottom: 22px; }
+  .coffee-heading, .facilities-heading { display: block; padding-block: 10px 24px; }
+  .coffee-heading > p, .facilities-heading > p { margin-top: 14px; }
+
+  /* Mobile Menu Filter Bar & Tabs */
   .menu-filter-bar {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 10px;
+    margin-bottom: 22px;
     padding-block: 12px;
   }
   .menu-filter-meta {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    font-size: 0.72rem;
   }
+  .filter-counter-live { font-size: 0.72rem; }
   .menu-filter-pills {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2664,16 +2693,79 @@ h1 em, h2 em, h3 em {
     width: 100%;
   }
   .menu-filter-btn {
+    min-height: 42px;
     padding: 8px 4px;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     gap: 4px;
     justify-content: center;
+    border-radius: var(--radius-sm);
   }
   .btn-filter-label .label-full { display: none; }
   .btn-filter-label .label-short { display: inline; }
   .btn-filter-index { display: none; }
   .btn-filter-badge { padding: 1px 5px; font-size: 0.68rem; }
-  .menu-item-badge { font-size: 0.62rem; padding: 2px 6px; }
+
+  /* Mobile Menu List Items */
+  .menu-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 8px;
+    padding-bottom: 11px;
+    font-size: 0.94rem;
+  }
+  .menu-list li > span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .menu-list li span small {
+    display: block;
+    width: 100%;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    margin-top: 4px;
+    color: rgba(var(--paper-rgb), 0.72);
+  }
+  .menu-dash { display: none; }
+  .menu-item-badge {
+    font-size: 0.62rem;
+    padding: 2px 6px;
+    margin-left: auto;
+  }
+
+  /* Mobile Bento Grid */
+  .menu-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .menu-bento-intro {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    min-height: auto;
+    padding: 16px 14px;
+  }
+  .menu-bento-intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .menu-bento-card {
+    min-height: 140px;
+  }
+  .menu-bento-word {
+    grid-column: 1 / -1 !important;
+    min-height: 60px;
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+  .menu-bento-word span { font-size: 1.6rem; }
+  .menu-bento-word small { font-size: 0.62rem; margin-top: 0; }
+
   .menu-bento.bento-filter-coffee,
   .menu-bento.bento-filter-food {
     grid-template-columns: repeat(2, 1fr);
@@ -2689,27 +2781,36 @@ h1 em, h2 em, h3 em {
   .menu-bento.bento-filter-coffee .menu-bento-americano,
   .menu-bento.bento-filter-food .menu-bento-meal {
     grid-column: 1 !important;
-    min-height: 150px;
+    min-height: 140px;
   }
   .menu-bento.bento-filter-coffee .menu-bento-milk,
   .menu-bento.bento-filter-food .menu-bento-donut {
     grid-column: 2 !important;
-    min-height: 150px;
+    min-height: 140px;
   }
   .menu-bento.bento-filter-coffee .menu-bento-word,
   .menu-bento.bento-filter-food .menu-bento-word {
     grid-column: 1 / -1 !important;
-    min-height: 64px;
-    padding: 12px 14px;
+    min-height: 60px;
+    padding: 10px 14px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 2px;
   }
   .menu-bento.bento-filter-coffee .menu-bento-word span,
   .menu-bento.bento-filter-food .menu-bento-word span { font-size: 1.6rem; }
   .menu-bento.bento-filter-coffee .menu-bento-word small,
   .menu-bento.bento-filter-food .menu-bento-word small { font-size: 0.62rem; }
+
+  .jogja-photo { padding: 18px 16px 14px; border-radius: 12px; }
+  .jogja-photo figcaption { align-items: flex-start; flex-direction: column; gap: 5px; font-size: .61rem; }
+  .jogja-motif-wrap { width: 82px; height: 82px; margin-top: 20px; }
+  .hours-row { padding: 18px; border-radius: 8px; }
+  .contact-card { padding: 18px; }
+  .map-container { height: 300px; }
+  .footer { padding-inline: var(--gutter); }
+  .footer-main, .footer-bottom { max-width: var(--page-width); margin-inline: auto; }
 }
 
 @media (min-width: 561px) {
