@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./variables.css?v=3.0" />
-  <link rel="stylesheet" href="./theme.css?v=3.0" />
+  <link rel="stylesheet" href="./variables.css?v=3.1" />
+  <link rel="stylesheet" href="./theme.css?v=3.1" />
   <script>document.documentElement.classList.add('js-enabled');</script>
 </head>
 <body>
@@ -165,33 +165,116 @@
       <div class="section-shell coffee-inner">
         <div class="section-index"><span>02</span><span>DARI DAPUR COFFEE BIKE</span></div>
         <div class="coffee-heading reveal"><div><p class="eyebrow">Pilihan untuk menemani harimu</p><h2 id="menu-title">Sajian yang<br /><em>ingin diulang.</em></h2></div><p>Pilihan kopi untuk menemani jeda dan hidangan Little Jogja untuk dinikmati bersama.</p></div>
-        <div class="menu-grid">
-          <article class="menu-group reveal">
+
+        <!-- FILTER KATEGORI MENU INTERAKTIF -->
+        <div class="menu-filter-bar reveal" role="toolbar" aria-label="Filter kategori sajian Coffee Bike">
+          <div class="menu-filter-meta">
+            <span class="filter-stamp-icon" aria-hidden="true">✦</span>
+            <span class="filter-meta-tag">KURASI SAJIAN</span>
+            <span class="filter-meta-separator" aria-hidden="true">/</span>
+            <span class="filter-counter-live" id="menuCounterLive">7 Pilihan Tersedia</span>
+          </div>
+          <div class="menu-filter-pills" role="tablist" aria-label="Kategori Sajian">
+            <button type="button" class="menu-filter-btn is-active" data-filter="all" role="tab" aria-selected="true" aria-controls="menuGridSection" id="tabFilterAll">
+              <span class="btn-filter-index">00</span>
+              <span class="btn-filter-label"><span class="label-full">Semua Sajian</span><span class="label-short">Semua</span></span>
+              <span class="btn-filter-badge">7</span>
+            </button>
+            <button type="button" class="menu-filter-btn" data-filter="coffee" role="tab" aria-selected="false" aria-controls="menuGridSection" id="tabFilterCoffee">
+              <span class="btn-filter-index">01</span>
+              <span class="btn-filter-label"><span class="label-full">Seri Kopi</span><span class="label-short">Kopi</span></span>
+              <span class="btn-filter-badge">5</span>
+            </button>
+            <button type="button" class="menu-filter-btn" data-filter="food" role="tab" aria-selected="false" aria-controls="menuGridSection" id="tabFilterFood">
+              <span class="btn-filter-index">02</span>
+              <span class="btn-filter-label"><span class="label-full">Little Jogja</span><span class="label-short">Jogja</span></span>
+              <span class="btn-filter-badge">2</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menuGridSection">
+          <article class="menu-group reveal" data-category="coffee">
             <div class="menu-group-head"><span class="menu-number">01</span><div><p class="eyebrow">Diseduh untuk jeda</p><h3>Seri<br /><em>kopi.</em></h3></div><span class="menu-doodle" aria-hidden="true">↗</span></div>
             <ul class="menu-list">
-              <li><span>Americano Original</span><span class="menu-dash" aria-hidden="true"></span></li>
-              <li><span>Coconut Americano</span><span class="menu-dash" aria-hidden="true"></span></li>
-              <li><span>Rum Americano</span><span class="menu-dash" aria-hidden="true"></span></li>
-              <li><span>Helena <small>Jasmine &amp; Blueberry Coffee</small></span><span class="menu-dash" aria-hidden="true"></span></li>
-              <li><span>Americano Soda <small>Americano dengan sentuhan soda</small></span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li>
+                <span>Americano Original</span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Signature</span>
+              </li>
+              <li>
+                <span>Coconut Americano</span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Segar &amp; Gurih</span>
+              </li>
+              <li>
+                <span>Rum Americano</span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Aroma Khas</span>
+              </li>
+              <li>
+                <span>Helena <small>Jasmine &amp; Blueberry Coffee</small></span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Artisan</span>
+              </li>
+              <li>
+                <span>Americano Soda <small>Americano dengan sentuhan soda</small></span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Sparkling</span>
+              </li>
             </ul>
           </article>
-          <article class="menu-group menu-group-food reveal">
+          <article class="menu-group menu-group-food reveal" data-category="food">
             <div class="menu-group-head"><span class="menu-number">02</span><div><p class="eyebrow">Sentuhan rasa rumahan</p><h3>Little<br /><em>Jogja.</em></h3></div><span class="menu-doodle menu-doodle-sun" aria-hidden="true">✳</span></div>
             <ul class="menu-list">
-              <li><span>Nasi Bakar Bumbu Rujak <small>Nasi bakar dengan bumbu cabai merah, tomat, bawang merah, dan bawang putih. Disajikan bersama sambal bawang.</small></span><span class="menu-dash" aria-hidden="true"></span></li>
-              <li><span>Kentang Donat <small>Camilan kentang dengan taburan gula halus</small></span><span class="menu-dash" aria-hidden="true"></span></li>
+              <li>
+                <span>Nasi Bakar Bumbu Rujak <small>Nasi bakar dengan bumbu cabai merah, tomat, bawang merah, dan bawang putih. Disajikan bersama sambal bawang.</small></span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Menu Utama</span>
+              </li>
+              <li>
+                <span>Kentang Donat <small>Camilan kentang dengan taburan gula halus</small></span>
+                <span class="menu-dash" aria-hidden="true"></span>
+                <span class="menu-item-badge">Kudapan Manis</span>
+              </li>
             </ul>
             <p class="menu-note">Little Jogja memadukan hidangan tradisional Indonesia dengan suasana kedai kopi yang santai.</p>
           </article>
         </div>
-        <div class="menu-bento reveal" aria-label="Pilihan menu Coffee Bike dan Little Jogja">
-          <article class="menu-bento-intro"><span>01 / 04</span><p>Pilihan kopi untuk menemani jeda dan hidangan Little Jogja untuk dinikmati bersama.</p><a class="underlined-link" href="#little-jogja">Lihat Little Jogja <span aria-hidden="true">↗</span></a></article>
-          <figure class="menu-bento-card menu-bento-americano"><img src="./Aset/optimized/Menu/1.png" alt="Americano Original Coffee Bike" loading="lazy" decoding="async" width="1080" height="1080" /><figcaption>AMERICANO ORIGINAL</figcaption></figure>
-          <figure class="menu-bento-card menu-bento-milk"><img src="./Aset/optimized/Menu/4.png" alt="Es kopi susu Coffee Bike" loading="lazy" decoding="async" width="1080" height="1080" /><figcaption>ES KOPI SUSU</figcaption></figure>
-          <a class="menu-bento-word" href="#little-jogja" aria-label="Lihat pilihan Little Jogja"><span>RASA</span><small>COFFEE BIKE × LITTLE JOGJA ↗</small></a>
-          <figure class="menu-bento-card menu-bento-meal"><img src="./Aset/optimized/Menu/3.png" alt="Nasi dan lauk Little Jogja dengan sambal dan sayuran" loading="lazy" decoding="async" width="1080" height="1080" /><figcaption>NASI &amp; LAUK</figcaption></figure>
-          <figure class="menu-bento-card menu-bento-donut"><img src="./Aset/optimized/Menu/2.png" alt="Kentang donat Little Jogja bertabur gula" loading="lazy" decoding="async" width="1080" height="1080" /><figcaption>KENTANG DONAT</figcaption></figure>
+        <div class="menu-bento reveal" aria-label="Pilihan menu Coffee Bike dan Little Jogja" id="menuBentoGrid">
+          <article class="menu-bento-intro" data-category="all">
+            <span class="bento-intro-index">01 / 04</span>
+            <p class="bento-intro-text">Pilihan kopi untuk menemani jeda dan hidangan Little Jogja untuk dinikmati bersama.</p>
+            <a class="underlined-link" href="#little-jogja">Lihat Little Jogja <span aria-hidden="true">↗</span></a>
+          </article>
+          <figure class="menu-bento-card menu-bento-americano" data-category="coffee">
+            <img src="./Aset/optimized/Menu/1.png" alt="Americano Original Coffee Bike" loading="lazy" decoding="async" width="1080" height="1080" />
+            <figcaption>
+              <span class="bento-caption-title">AMERICANO ORIGINAL</span>
+            </figcaption>
+          </figure>
+          <figure class="menu-bento-card menu-bento-milk" data-category="coffee">
+            <img src="./Aset/optimized/Menu/4.png" alt="Es kopi susu Coffee Bike" loading="lazy" decoding="async" width="1080" height="1080" />
+            <figcaption>
+              <span class="bento-caption-title">ES KOPI SUSU</span>
+            </figcaption>
+          </figure>
+          <a class="menu-bento-word" href="#little-jogja" aria-label="Lihat pilihan Little Jogja" data-category="all">
+            <span class="bento-word-main">RASA</span>
+            <small class="bento-word-sub">COFFEE BIKE × LITTLE JOGJA ↗</small>
+          </a>
+          <figure class="menu-bento-card menu-bento-meal" data-category="food">
+            <img src="./Aset/optimized/Menu/3.png" alt="Nasi dan lauk Little Jogja dengan sambal dan sayuran" loading="lazy" decoding="async" width="1080" height="1080" />
+            <figcaption>
+              <span class="bento-caption-title">NASI &amp; LAUK</span>
+            </figcaption>
+          </figure>
+          <figure class="menu-bento-card menu-bento-donut" data-category="food">
+            <img src="./Aset/optimized/Menu/2.png" alt="Kentang donat Little Jogja bertabur gula" loading="lazy" decoding="async" width="1080" height="1080" />
+            <figcaption>
+              <span class="bento-caption-title">KENTANG DONAT</span>
+            </figcaption>
+          </figure>
         </div>
         <a class="underlined-link menu-contact" href="https://www.instagram.com/coffeebikee/" target="_blank" rel="noopener noreferrer">Tanya tentang menu <span aria-hidden="true">↗</span></a>
       </div>
@@ -620,6 +703,116 @@
         }, { threshold: 0.12 });
         contactObserver.observe(contactSection);
       }
+
+      // 8. Interactive Vintage Editorial Menu Category Filter (Semua, Seri Kopi, Little Jogja)
+      const filterButtons = document.querySelectorAll('.menu-filter-btn');
+      const menuGrid = document.getElementById('menuGridSection');
+      const menuBento = document.getElementById('menuBentoGrid');
+      const menuGroups = document.querySelectorAll('.menu-group');
+      const bentoCards = document.querySelectorAll('.menu-bento-card');
+      const bentoIntro = document.querySelector('.menu-bento-intro');
+      const bentoWord = document.querySelector('.menu-bento-word');
+      const counterLive = document.getElementById('menuCounterLive');
+
+      const filterCopies = {
+        all: {
+          counter: '7 Pilihan Tersedia · 5 Kopi & 2 Little Jogja',
+          introNum: '01 / 04',
+          introText: 'Pilihan kopi untuk menemani jeda dan hidangan Little Jogja untuk dinikmati bersama.',
+          wordTitle: 'RASA',
+          wordSub: 'COFFEE BIKE × LITTLE JOGJA ↗'
+        },
+        coffee: {
+          counter: '5 Pilihan Seduhan Kopi Tersedia',
+          introNum: '01 / 02 · SERI KOPI',
+          introText: 'Seduhan kopi pilihan untuk menemani jeda, fokus bekerja, dan bercerita di kedai.',
+          wordTitle: 'SEDUH',
+          wordSub: 'FRESHLY BREWED COFFEE · SIGNATURE ↗'
+        },
+        food: {
+          counter: '2 Hidangan Khas Little Jogja Tersedia',
+          introNum: '01 / 02 · LITTLE JOGJA',
+          introText: 'Cita rasa autentik masakan rumah khas Jawa untuk dinikmati bersama di Coffee Bike.',
+          wordTitle: 'RASA',
+          wordSub: 'KULINER TRADISIONAL INDONESIA ↗'
+        }
+      };
+
+      const setMenuFilter = (filterKey) => {
+        // 1. Update filter tab buttons
+        filterButtons.forEach(btn => {
+          const isActive = btn.dataset.filter === filterKey;
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-selected', String(isActive));
+        });
+
+        // 2. Update dynamic counter & texts
+        const copy = filterCopies[filterKey] || filterCopies.all;
+        if (counterLive) counterLive.textContent = copy.counter;
+
+        if (bentoIntro) {
+          const numEl = bentoIntro.querySelector('.bento-intro-index');
+          const pEl = bentoIntro.querySelector('.bento-intro-text');
+          if (numEl) numEl.textContent = copy.introNum;
+          if (pEl) pEl.textContent = copy.introText;
+        }
+
+        if (bentoWord) {
+          const spanEl = bentoWord.querySelector('.bento-word-main');
+          const smallEl = bentoWord.querySelector('.bento-word-sub');
+          if (spanEl) spanEl.textContent = copy.wordTitle;
+          if (smallEl) smallEl.textContent = copy.wordSub;
+        }
+
+        // 3. Update Menu Grid classes & visibility
+        if (menuGrid) {
+          menuGrid.classList.remove('filter-all', 'filter-coffee', 'filter-food', 'single-active');
+          if (filterKey === 'all') {
+            menuGrid.classList.add('filter-all');
+          } else {
+            menuGrid.classList.add('filter-' + filterKey, 'single-active');
+          }
+        }
+
+        menuGroups.forEach(group => {
+          const cat = group.dataset.category;
+          const match = (filterKey === 'all' || cat === filterKey);
+          if (match) {
+            group.style.display = '';
+            group.classList.remove('is-filtering-in');
+            void group.offsetWidth; // Trigger reflow for smooth animation
+            group.classList.add('is-filtering-in');
+          } else {
+            group.style.display = 'none';
+          }
+        });
+
+        // 4. Update Bento classes & visibility
+        if (menuBento) {
+          menuBento.classList.remove('bento-filter-all', 'bento-filter-coffee', 'bento-filter-food');
+          menuBento.classList.add('bento-filter-' + filterKey);
+        }
+
+        bentoCards.forEach(card => {
+          const cat = card.dataset.category;
+          const match = (filterKey === 'all' || cat === filterKey);
+          if (match) {
+            card.style.display = '';
+            card.classList.remove('is-filtering-in');
+            void card.offsetWidth; // Trigger reflow for smooth animation
+            card.classList.add('is-filtering-in');
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      };
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filterKey = btn.dataset.filter;
+          setMenuFilter(filterKey);
+        });
+      });
     })();
   </script>
 </body>
