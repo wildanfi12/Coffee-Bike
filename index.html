@@ -15,8 +15,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./variables.css?v=3.3" />
-  <link rel="stylesheet" href="./theme.css?v=3.3" />
+  <!-- Anti-Cache Directives for Instant Updates -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="canonical" href="https://coffeebike.naracreative.site" />
+  <meta property="og:url" content="https://coffeebike.naracreative.site" />
+  <meta property="og:image" content="./Aset/optimized/Foto%201.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coffee Bike — Your Space, Your Pace" />
+  <meta name="twitter:description" content="Nikmati kopi, hidangan Little Jogja, waktu bersama, dan ruang untuk bekerja di Coffee Bike, Petamburan." />
+  <meta name="twitter:image" content="./Aset/optimized/Foto%201.png" />
+
+  <!-- Schema.org JSON-LD Structured Data for Local Coffee Shop -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Coffee Bike",
+    "alternateName": "Coffee Bike x Little Jogja",
+    "image": "https://coffeebike.naracreative.site/Aset/optimized/Foto%201.png",
+    "url": "https://coffeebike.naracreative.site",
+    "telephone": "+6287867380424",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Dr. Muwardi I No. 30, RT.1/RW.4, Grogol",
+      "addressLocality": "Grogol Petamburan, Jakarta Barat",
+      "addressRegion": "DKI Jakarta",
+      "postalCode": "11470",
+      "addressCountry": "ID"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -6.1644335,
+      "longitude": 106.7920917
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:00",
+        "closes": "00:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "03:00"
+      }
+    ],
+    "servesCuisine": ["Coffee", "Indonesian", "Javanese"],
+    "priceRange": "$"
+  }
+  </script>
+
+  <link rel="stylesheet" href="./variables.css?v=3.4" />
+  <link rel="stylesheet" href="./theme.css?v=3.4" />
   <script>document.documentElement.classList.add('js-enabled');</script>
 </head>
 <body>
@@ -250,24 +305,28 @@
             <img src="./Aset/optimized/Menu/1.png" alt="Americano Original Coffee Bike" loading="lazy" decoding="async" width="1080" height="1080" />
             <figcaption>
               <span class="bento-caption-title">AMERICANO ORIGINAL</span>
+              <span class="bento-caption-tag">SERI KOPI</span>
             </figcaption>
           </figure>
           <figure class="menu-bento-card menu-bento-milk" data-category="coffee">
             <img src="./Aset/optimized/Menu/4.png" alt="Es kopi susu Coffee Bike" loading="lazy" decoding="async" width="1080" height="1080" />
             <figcaption>
               <span class="bento-caption-title">ES KOPI SUSU</span>
+              <span class="bento-caption-tag">SIGNATURE</span>
             </figcaption>
           </figure>
           <figure class="menu-bento-card menu-bento-meal" data-category="food">
             <img src="./Aset/optimized/Menu/3.png" alt="Nasi dan lauk Little Jogja dengan sambal dan sayuran" loading="lazy" decoding="async" width="1080" height="1080" />
             <figcaption>
               <span class="bento-caption-title">NASI &amp; LAUK</span>
+              <span class="bento-caption-tag">LITTLE JOGJA</span>
             </figcaption>
           </figure>
           <figure class="menu-bento-card menu-bento-donut" data-category="food">
             <img src="./Aset/optimized/Menu/2.png" alt="Kentang donat Little Jogja bertabur gula" loading="lazy" decoding="async" width="1080" height="1080" />
             <figcaption>
               <span class="bento-caption-title">KENTANG DONAT</span>
+              <span class="bento-caption-tag">KUDAPAN MANIS</span>
             </figcaption>
           </figure>
           <a class="menu-bento-word" href="#little-jogja" aria-label="Lihat pilihan Little Jogja" data-category="all">
@@ -313,7 +372,10 @@
     <section class="hours-section" id="hours" aria-labelledby="hours-title">
       <div class="hours-wrap section-shell">
         <div class="section-index"><span>05</span><span>WAKTU BERKUNJUNG</span></div>
-        <div class="hours-heading reveal"><p class="eyebrow">Mampir, duduk lebih lama</p><h2 id="hours-title">Waktu<br /><em>berkunjung.</em></h2><span class="open-badge"><i aria-hidden="true"></i> BUKA SETIAP HARI</span></div>
+        <div class="hours-heading reveal"><p class="eyebrow">Mampir, duduk lebih lama</p><h2 id="hours-title">Waktu<br /><em>berkunjung.</em></h2><span class="open-badge" id="hoursOpenBadge" aria-live="polite">
+            <i class="live-dot is-open" id="contactLiveDot" aria-hidden="true"></i>
+            <span id="contactLiveText">BUKA HARI INI</span>
+          </span></div>
         <div class="hours-list reveal">
           <div class="hours-row"><div><span class="day-label">WEEKDAY</span><h3>Hari kerja</h3></div><div class="time-label">11.00 <span>—</span> 00.00</div></div>
           <div class="hours-row"><div><span class="day-label">WEEKEND</span><h3>Akhir pekan</h3></div><div class="time-label">11.00 <span>—</span> 03.00<small>Dini hari berikutnya</small></div></div>
@@ -583,7 +645,7 @@
       }, { passive: true });
       updateScrollEffects();
 
-      // 3. Hero Video Autoplay with Safari/iOS resilience
+      // 3. Hero Video Autoplay with Safari/iOS resilience & battery-saver fallback
       const heroVideo = document.getElementById('heroVideo');
       if (heroVideo) {
         heroVideo.muted = true;
@@ -599,6 +661,19 @@
           document.addEventListener('visibilitychange', () => {
             if (!document.hidden && !reduceMotion) tryPlay();
           });
+
+          // Mobile touch / scroll wake-up if initial autoplay was blocked by power-saver
+          const handleFirstGesture = () => {
+            if (heroVideo.paused) {
+              heroVideo.play().catch(() => {});
+            }
+            window.removeEventListener('touchstart', handleFirstGesture);
+            window.removeEventListener('scroll', handleFirstGesture);
+            window.removeEventListener('click', handleFirstGesture);
+          };
+          window.addEventListener('touchstart', handleFirstGesture, { passive: true });
+          window.addEventListener('scroll', handleFirstGesture, { passive: true, once: true });
+          window.addEventListener('click', handleFirstGesture, { once: true });
         }
       }
 
@@ -632,38 +707,55 @@
         document.querySelectorAll('main section[id]').forEach(section => navObserver.observe(section));
       }
 
-      // 6. Live Opening Hours Status (Waktu Jakarta UTC+7)
+      // 6. Live Opening Hours Status (Waktu Jakarta UTC+7 - Precise Shift Evaluation)
       const updateLiveStatus = () => {
         const liveDot = document.getElementById('liveDot');
         const liveText = document.getElementById('liveStatusText');
+        const contactLiveDot = document.getElementById('contactLiveDot');
+        const contactLiveText = document.getElementById('contactLiveText');
+        const hoursOpenBadge = document.getElementById('hoursOpenBadge');
 
         const now = new Date();
         const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
         const jakartaDate = new Date(utc + (3600000 * 7));
-        const day = jakartaDate.getDay();
+        const day = jakartaDate.getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
         const hour = jakartaDate.getHours();
         const minute = jakartaDate.getMinutes();
         const currentTime = hour + (minute / 60);
 
-        const isWeekend = (day === 0 || day === 6);
+        // Previous day shift context for early morning (00:00 - 02:59)
+        const prevDay = (day + 6) % 7;
         let isOpen = false;
         let statusString = '';
+        let badgeString = '';
 
-        if (!isWeekend) {
-          if (currentTime >= 11 && currentTime < 24) {
-            isOpen = true;
-            statusString = 'Buka Sekarang · Tutup 00.00 WIB';
-          } else {
-            isOpen = false;
-            statusString = 'Tutup · Buka Hari Ini Pukul 11.00 WIB';
-          }
-        } else {
-          if (currentTime >= 11 || currentTime < 3) {
+        if (currentTime < 3) {
+          // Late night continuation of previous day:
+          // Saturday night (prevDay === 6) and Sunday night (prevDay === 0) run until 03:00 WIB
+          if (prevDay === 6 || prevDay === 0) {
             isOpen = true;
             statusString = 'Buka Sekarang · Tutup 03.00 WIB (Dini Hari)';
+            badgeString = 'BUKA SEKARANG · HINGGA 03.00 WIB';
           } else {
             isOpen = false;
             statusString = 'Tutup · Buka Hari Ini Pukul 11.00 WIB';
+            badgeString = 'TUTUP SAAT INI · BUKA 11.00 WIB';
+          }
+        } else if (currentTime >= 3 && currentTime < 11) {
+          // Morning closed period across all days
+          isOpen = false;
+          statusString = 'Tutup · Buka Hari Ini Pukul 11.00 WIB';
+          badgeString = 'TUTUP SAAT INI · BUKA 11.00 WIB';
+        } else {
+          // Regular operating hours (11:00 - 23:59)
+          const isWeekendShift = (day === 0 || day === 6);
+          isOpen = true;
+          if (isWeekendShift) {
+            statusString = 'Buka Sekarang · Tutup 03.00 WIB (Dini Hari)';
+            badgeString = 'BUKA SEKARANG · HINGGA 03.00 WIB';
+          } else {
+            statusString = 'Buka Sekarang · Tutup 00.00 WIB';
+            badgeString = 'BUKA SEKARANG · HINGGA 00.00 WIB';
           }
         }
 
@@ -673,12 +765,13 @@
           liveDot.classList.toggle('is-closed', !isOpen);
         }
 
-        const contactLiveDot = document.getElementById('contactLiveDot');
-        const contactLiveText = document.getElementById('contactLiveText');
-        if (contactLiveText) contactLiveText.textContent = isOpen ? 'Buka Sekarang' : 'Tutup Saat Ini';
+        if (contactLiveText) contactLiveText.textContent = badgeString;
         if (contactLiveDot) {
           contactLiveDot.classList.toggle('is-open', isOpen);
           contactLiveDot.classList.toggle('is-closed', !isOpen);
+        }
+        if (hoursOpenBadge) {
+          hoursOpenBadge.classList.toggle('is-closed', !isOpen);
         }
       };
       updateLiveStatus();
